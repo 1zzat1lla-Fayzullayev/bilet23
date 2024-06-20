@@ -28,10 +28,8 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 	}
 
-	// Other functionality and event listeners...
 })
 
-// Slider control functions (keeping these as they were in your original script)
 const fromSlider = document.getElementById('fromSlider')
 const toSlider = document.getElementById('toSlider')
 const fromInput = document.getElementById('fromInput')

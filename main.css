@@ -1,3 +1,12 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	box-sizing: border-box;
+}
+
 .swiper-button-next,
 .swiper-button-prev {
 	background-color: #363636;
@@ -89,10 +98,6 @@
 
 #calendar {
 	margin-top: 10px;
-	padding: 10px;
-	background-color: #ebebeb;
-	border-radius: 10px;
-	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 	position: absolute;
 }
 
@@ -149,7 +154,6 @@ input[type='range']::-webkit-slider-thumb {
 }
 
 input[type='range']::-moz-range-thumb {
-	-webkit-appearance: none;
 	pointer-events: all;
 	width: 24px;
 	height: 24px;
@@ -201,18 +205,36 @@ input::-webkit-inner-spin-button {
 #datePicker {
 	position: absolute;
 	top: 40px;
-	left: 0;
+	left: -20px;
 	z-index: 999;
+	display: flex;
+	justify-content: center;
 }
 
 #priceRangeModal {
 	position: absolute;
-	top: 950px;
+	top: 140px;
 	z-index: 999;
+	display: flex;
+	justify-content: center;
+}
+@media screen and (max-width: 768px) {
+	#datePicker {
+		left: -200px;
+		width: 100vw;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	#priceRangeModal {
+		left: -6%;
+		top: 5.4%;
+		width: 100vw;
+	}
 }
 
 .modal-content {
-	background-color: #fefefe;
+	background-color: #fff;
 	margin: auto;
 	height: 250px;
 	width: 460px;
@@ -222,10 +244,18 @@ input::-webkit-inner-spin-button {
 	margin: auto;
 	max-width: 500px;
 	border-radius: 20px;
+	border-radius: 20px;
+	filter: drop-shadow(0px 0px 18px rgba(170, 170, 170, 0.25));
+}
+
+@media screen and (max-width: 768px) {
+	.modal-content {
+		width: 350px;
+	}
 }
 
 .modal-content1 {
-	background-color: #fefefe;
+	background-color: #fff;
 	margin: auto;
 	display: flex;
 	justify-content: center;
@@ -233,4 +263,6 @@ input::-webkit-inner-spin-button {
 	margin: auto;
 	max-width: 500px;
 	border-radius: 20px;
+	border-radius: 20px;
+	filter: drop-shadow(0px 0px 18px rgba(170, 170, 170, 0.25));
 }
