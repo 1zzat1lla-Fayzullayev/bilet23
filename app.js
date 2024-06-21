@@ -7,25 +7,37 @@ document.addEventListener('DOMContentLoaded', function () {
 	const closePriceRangeModal = document.getElementById('closePriceRangeModal')
 	const calendar = document.getElementById('calendar')
 	const price = document.getElementById('price')
+	const priceImg = priceButton.querySelector('img')
+	const dataImg = datePickerToggle.querySelector('img')
 
 	datePickerToggle.addEventListener('click', function () {
 		calendar.classList.toggle('hidden')
-		datePickerToggle.classList.toggle('active')
+		const isDataActive = datePickerToggle.classList.toggle('active')
+		const dataSrc = isDataActive
+			? './images/active-data.png'
+			: './images/date.svg'
+		dataImg.src = dataSrc
 	})
 
 	closeCalendarModal.addEventListener('click', function () {
 		calendar.classList.add('hidden')
 		datePickerToggle.classList.remove('active')
+		datePickerToggle.classList.remove('active')
+		dataImg.src = './images/date.svg'
 	})
 
 	priceButton.addEventListener('click', function () {
 		price.classList.toggle('hidden')
-		priceButton.classList.toggle('active')
+		const isActive = priceButton.classList.toggle('active')
+		const imgSrc = isActive ? './images/active-price.png' : './images/price.svg'
+		priceImg.src = imgSrc
 	})
 
 	closePriceRangeModal.addEventListener('click', function () {
 		price.classList.add('hidden')
 		priceButton.classList.remove('active')
+		priceImg.classList.remove('active')
+		priceImg.src = './images/price.svg'
 	})
 
 	window.onclick = function (event) {
