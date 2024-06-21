@@ -67,6 +67,12 @@ body {
 	z-index: 99;
 }
 
+@media screen and (max-width: 768px) {
+	#hamburgerMenu{
+		width: 100%;
+	}
+}
+
 #hamburgerMenu.open {
 	padding-top: 40px;
 	height: 600px;
@@ -265,9 +271,3 @@ input::-webkit-inner-spin-button {
 	color: #F71313; 
 }
 
-/* @media screen and (min-width: 1280px) {
-	.cards{
-		display: grid;
-		grid-column: 3;
-	}
-} */
