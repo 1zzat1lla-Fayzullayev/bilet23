@@ -1,13 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
-	const datePickerToggle = document.getElementById('datePickerToggle')
-	const calendar = document.getElementById('calendar')
-	const price = document.getElementById('price')
-	const closeCalendarModal = document.getElementById('closeCalendarModal')
-	const priceButton = document.getElementById('priceButton')
-	const priceRangeModal = document.getElementById('priceRangeModal')
-	const closePriceRangeModal = document.getElementById('closePriceRangeModal')
 	const hamburgerMenuToggle = document.getElementById('hamburgerMenuToggle')
 	const hamburgerMenu = document.getElementById('hamburgerMenu')
+	const datePickerToggle = document.getElementById('datePickerToggle')
+	const closeCalendarModal = document.getElementById('closeCalendarModal')
+	const priceButton = document.getElementById('priceButton')
+	const closePriceRangeModal = document.getElementById('closePriceRangeModal')
+	const calendar = document.getElementById('calendar')
+	const price = document.getElementById('price')
 
 	datePickerToggle.addEventListener('click', function () {
 		calendar.classList.toggle('hidden')
@@ -25,13 +24,13 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 
 	closePriceRangeModal.addEventListener('click', function () {
-		priceRangeModal.style.display = 'none'
+		price.classList.add('hidden')
 		priceButton.classList.remove('active')
 	})
 
 	window.onclick = function (event) {
-		if (event.target === priceRangeModal) {
-			priceRangeModal.classList.add('hidden')
+		if (event.target === price) {
+			price.classList.add('hidden')
 			priceButton.classList.remove('active')
 		}
 	}
