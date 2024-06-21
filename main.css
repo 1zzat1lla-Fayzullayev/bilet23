@@ -264,3 +264,10 @@ input::-webkit-inner-spin-button {
 .button.active {
 	color: #F71313; 
 }
+
+/* @media screen and (min-width: 1280px) {
+	.cards{
+		display: grid;
+		grid-column: 3;
+	}
+} */
