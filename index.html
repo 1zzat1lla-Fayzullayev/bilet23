@@ -17,7 +17,6 @@
 		/>
 
 		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-		<script src="/app.js" defer></script>
 	</head>
 	<body class="font-[Commissioner] lg:px-0 !overflow-x-hidden">
 		<header class="bg-[#F71313]">
@@ -234,8 +233,12 @@
 
 		<div class="px-[20px] lg:px-[30px] container mx-auto mt-10 xl:mt-[20px]">
 			<div class="max-w-[1160px] mx-auto">
-				<div class="w-full relative flex justify-center flex-col md:flex-row items-center gap-[20px]">
-					<div class="flex items-center gap-[60px] flex-col md:gap-[50px] xl:gap-[20px] lg:gap-[50px] lg:flex-col xl:flex-row">
+				<div
+					class="w-full relative flex justify-center flex-col md:flex-row items-center gap-[20px]"
+				>
+					<div
+						class="flex items-center gap-[60px] flex-col md:gap-[50px] xl:gap-[20px] lg:gap-[50px] lg:flex-col xl:flex-row"
+					>
 						<div
 							class="relative w-full max-w-[300px] lg:w-full lg:h-[122px] h-[122px]"
 						>
@@ -277,7 +280,9 @@
 						</div>
 					</div>
 
-					<div class="flex items-center gap-[60px] mt-[40px] md:mt-0 flex-col md:gap-[50px] xl:gap-[20px] lg:gap-[50px] lg:flex-col xl:flex-row">
+					<div
+						class="flex items-center gap-[60px] mt-[40px] md:mt-0 flex-col md:gap-[50px] xl:gap-[20px] lg:gap-[50px] lg:flex-col xl:flex-row"
+					>
 						<div
 							class="relative w-full max-w-[300px] lg:w-full lg:h-[122px] h-[122px]"
 						>
@@ -359,8 +364,12 @@
 											class="mt-[50px] flex flex-col justify-center items-center"
 										>
 											<div class="flex justify-center items-center gap-10">
-												<p class="font-semibold">Март 2023</p>
-												<img src="./images/Arrow 16.png" alt="arrow" />
+												<p id="monthYear" class="font-semibold">Март 2023</p>
+												<img
+													src="./images/Arrow 16.png"
+													alt="arrow"
+													id="nextMonth"
+												/>
 											</div>
 											<div
 												class="bg-[#EBEBEB] w-[90%] h-[40px] rounded-[20px] mt-[15px] flex items-center justify-center flex-col"
@@ -378,68 +387,9 @@
 												</ul>
 											</div>
 											<div
+												id="calendarDays"
 												class="flex flex-col gap-[20px] pl-[25px] mt-[15px] w-[90%]"
-											>
-												<ul
-													class="flex items-center justify-between px-[15px] w-full"
-												>
-													<li></li>
-													<li></li>
-													<li class="opacity-[0.3]">1</li>
-													<li class="opacity-[0.3]">2</li>
-													<li class="opacity-[0.3]">3</li>
-													<li class="opacity-[0.3] text-[#006811]">4</li>
-													<li class="opacity-[0.3] text-[#006811]">5</li>
-												</ul>
-												<ul
-													class="flex items-center justify-between px-[15px] w-full"
-												>
-													<li class="opacity-[0.3]">6</li>
-													<li class="opacity-[0.3]">7</li>
-													<li class="opacity-[0.3]">8</li>
-													<li class="opacity-[0.3]">9</li>
-													<li class="opacity-[0.3]">10</li>
-													<li class="opacity-[0.3] text-[#006811]">11</li>
-													<li class="opacity-[0.3] text-[#006811]">12</li>
-												</ul>
-												<ul
-													class="flex items-center justify-between px-[15px] w-full"
-												>
-													<li>13</li>
-													<li>14</li>
-													<li>15</li>
-													<li>16</li>
-													<li>17</li>
-													<li class="text-[#006811]">18</li>
-													<li class="text-[#006811]">19</li>
-												</ul>
-												<ul
-													class="flex items-center justify-between px-[15px] w-full"
-												>
-													<li>20</li>
-													<li>21</li>
-													<li>22</li>
-													<li
-														class="bg-[#F71313] text-white rounded-full w-[31px] h-[31px] text-center flex justify-center items-center"
-													>
-														23
-													</li>
-													<li>24</li>
-													<li class="text-[#006811]">25</li>
-													<li class="text-[#006811]">26</li>
-												</ul>
-												<ul
-													class="flex items-center justify-between px-[15px] w-full pr-[50px]"
-												>
-													<li>27</li>
-													<li>28</li>
-													<li>29</li>
-													<li>30</li>
-													<li>31</li>
-													<li></li>
-													<li></li>
-												</ul>
-											</div>
+											></div>
 											<div
 												class="flex flex-col items-center justify-center mt-[30px]"
 											>
@@ -555,7 +505,7 @@
 
 					<div>
 						<div
-							class="mt-[40px] grid grid-cols-1 sm:!grid-cols-2 md:!grid-cols-3 lg:!grid-cols-3 xl:!grid-cols-4 place-items-center gap-[40px] items-start md:justify-start md:gap-x-[20px] md:gap-y-[40px]"
+							class="mt-[40px] grid grid-cols-1 sm:!grid-cols-2 md:!grid-cols-3 lg:!grid-cols-3 lg:gap-0 lg:gap-y-[20px] xl:!grid-cols-4 place-items-center gap-[40px] items-start md:justify-start md:gap-x-[20px] md:gap-y-[40px]"
 						>
 							<div>
 								<div
@@ -578,14 +528,14 @@
 									</p>
 								</div>
 								<p
-									class="text-[20px] font-bold ml-1 max-w-[274px] mt-[60px] xl:mt-[15px]"
+									class="text-[20px] font-bold ml-1 max-w-[274px] lg:mt-[10px] mt-[60px] xl:mt-[15px] md:mt-[35px]"
 								>
 									На солнце, вдоль рядов кукурузы
 								</p>
-								<p class="mt-[15px] text-[14px] ml-1 text-[#999999]">
+								<p class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]">
 									18 марта · СБ · 12:00
 								</p>
-								<p class="mt-[15px] text-[14px] ml-1 text-[#999999]">
+								<p class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]">
 									ТРЕТЬЯКОВСКАЯ ГАЛЕРЕЯ
 								</p>
 								<a
@@ -616,14 +566,14 @@
 									</p>
 								</div>
 								<p
-									class="text-[20px] font-bold ml-1 max-w-[274px] mt-[60px] xl:mt-[15px]"
+									class="text-[20px] font-bold ml-1 max-w-[274px] lg:mt-[10px] mt-[60px] xl:mt-[15px] md:mt-[35px]"
 								>
 									На солнце, вдоль рядов кукурузы
 								</p>
-								<p class="mt-[15px] text-[14px] ml-1 text-[#999999]">
+								<p class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]">
 									18 марта · СБ · 12:00
 								</p>
-								<p class="mt-[15px] text-[14px] ml-1 text-[#999999]">
+								<p class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]">
 									ТРЕТЬЯКОВСКАЯ ГАЛЕРЕЯ
 								</p>
 								<a
@@ -654,14 +604,14 @@
 									</p>
 								</div>
 								<p
-									class="text-[20px] font-bold ml-1 max-w-[274px] mt-[60px] xl:mt-[15px]"
+									class="text-[20px] font-bold ml-1 max-w-[274px] lg:mt-[10px] mt-[60px] xl:mt-[15px] md:mt-[35px]"
 								>
 									На солнце, вдоль рядов кукурузы
 								</p>
-								<p class="mt-[15px] text-[14px] ml-1 text-[#999999]">
+								<p class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]">
 									18 марта · СБ · 12:00
 								</p>
-								<p class="mt-[15px] text-[14px] ml-1 text-[#999999]">
+								<p class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]">
 									ТРЕТЬЯКОВСКАЯ ГАЛЕРЕЯ
 								</p>
 								<a
@@ -692,14 +642,14 @@
 									</p>
 								</div>
 								<p
-									class="text-[20px] font-bold ml-1 max-w-[274px] mt-[60px] xl:mt-[15px]"
+									class="text-[20px] font-bold ml-1 max-w-[274px] lg:mt-[10px] mt-[60px] xl:mt-[15px] md:mt-[35px]"
 								>
 									На солнце, вдоль рядов кукурузы
 								</p>
-								<p class="mt-[15px] text-[14px] ml-1 text-[#999999]">
+								<p class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]">
 									18 марта · СБ · 12:00
 								</p>
-								<p class="mt-[15px] text-[14px] ml-1 text-[#999999]">
+								<p class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]">
 									ТРЕТЬЯКОВСКАЯ ГАЛЕРЕЯ
 								</p>
 								<a
@@ -729,14 +679,14 @@
 									</p>
 								</div>
 								<p
-									class="text-[20px] font-bold ml-1 max-w-[274px] mt-[60px] xl:mt-[15px]"
+									class="text-[20px] font-bold ml-1 max-w-[274px] lg:mt-[10px] mt-[60px] xl:mt-[15px] md:mt-[35px]"
 								>
 									На солнце, вдоль рядов кукурузы
 								</p>
-								<p class="mt-[15px] text-[14px] ml-1 text-[#999999]">
+								<p class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]">
 									18 марта · СБ · 12:00
 								</p>
-								<p class="mt-[15px] text-[14px] ml-1 text-[#999999]">
+								<p class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]">
 									ТРЕТЬЯКОВСКАЯ ГАЛЕРЕЯ
 								</p>
 								<a
@@ -767,14 +717,14 @@
 									</p>
 								</div>
 								<p
-									class="text-[20px] font-bold ml-1 max-w-[274px] mt-[60px] xl:mt-[15px]"
+									class="text-[20px] font-bold ml-1 max-w-[274px] lg:mt-[10px] mt-[60px] xl:mt-[15px] md:mt-[35px]"
 								>
 									На солнце, вдоль рядов кукурузы
 								</p>
-								<p class="mt-[15px] text-[14px] ml-1 text-[#999999]">
+								<p class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]">
 									18 марта · СБ · 12:00
 								</p>
-								<p class="mt-[15px] text-[14px] ml-1 text-[#999999]">
+								<p class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]">
 									ТРЕТЬЯКОВСКАЯ ГАЛЕРЕЯ
 								</p>
 								<a
@@ -805,14 +755,14 @@
 									</p>
 								</div>
 								<p
-									class="text-[20px] font-bold ml-1 max-w-[274px] mt-[60px] xl:mt-[15px]"
+									class="text-[20px] font-bold ml-1 max-w-[274px] lg:mt-[10px] mt-[60px] xl:mt-[15px] md:mt-[35px]"
 								>
 									На солнце, вдоль рядов кукурузы
 								</p>
-								<p class="mt-[15px] text-[14px] ml-1 text-[#999999]">
+								<p class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]">
 									18 марта · СБ · 12:00
 								</p>
-								<p class="mt-[15px] text-[14px] ml-1 text-[#999999]">
+								<p class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]">
 									ТРЕТЬЯКОВСКАЯ ГАЛЕРЕЯ
 								</p>
 								<a
@@ -843,14 +793,14 @@
 									</p>
 								</div>
 								<p
-									class="text-[20px] font-bold ml-1 max-w-[274px] mt-[60px] xl:mt-[15px]"
+									class="text-[20px] font-bold ml-1 max-w-[274px] lg:mt-[10px] mt-[60px] xl:mt-[15px] md:mt-[35px]"
 								>
 									На солнце, вдоль рядов кукурузы
 								</p>
-								<p class="mt-[15px] text-[14px] ml-1 text-[#999999]">
+								<p class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]">
 									18 марта · СБ · 12:00
 								</p>
-								<p class="mt-[15px] text-[14px] ml-1 text-[#999999]">
+								<p class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]">
 									ТРЕТЬЯКОВСКАЯ ГАЛЕРЕЯ
 								</p>
 								<a
@@ -880,14 +830,14 @@
 									</p>
 								</div>
 								<p
-									class="text-[20px] font-bold ml-1 max-w-[274px] mt-[60px] xl:mt-[15px]"
+									class="text-[20px] font-bold ml-1 max-w-[274px] lg:mt-[10px] mt-[60px] xl:mt-[15px] md:mt-[35px]"
 								>
 									На солнце, вдоль рядов кукурузы
 								</p>
-								<p class="mt-[15px] text-[14px] ml-1 text-[#999999]">
+								<p class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]">
 									18 марта · СБ · 12:00
 								</p>
-								<p class="mt-[15px] text-[14px] ml-1 text-[#999999]">
+								<p class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]">
 									ТРЕТЬЯКОВСКАЯ ГАЛЕРЕЯ
 								</p>
 								<a
@@ -917,14 +867,14 @@
 									</p>
 								</div>
 								<p
-									class="text-[20px] font-bold ml-1 max-w-[274px] mt-[60px] xl:mt-[15px]"
+									class="text-[20px] font-bold ml-1 max-w-[274px] lg:mt-[10px] mt-[60px] xl:mt-[15px] md:mt-[35px]"
 								>
 									На солнце, вдоль рядов кукурузы
 								</p>
-								<p class="mt-[15px] text-[14px] ml-1 text-[#999999]">
+								<p class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]">
 									18 марта · СБ · 12:00
 								</p>
-								<p class="mt-[15px] text-[14px] ml-1 text-[#999999]">
+								<p class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]">
 									ТРЕТЬЯКОВСКАЯ ГАЛЕРЕЯ
 								</p>
 								<a
@@ -954,14 +904,14 @@
 									</p>
 								</div>
 								<p
-									class="text-[20px] font-bold ml-1 max-w-[274px] mt-[60px] xl:mt-[15px]"
+									class="text-[20px] font-bold ml-1 max-w-[274px] lg:mt-[10px] mt-[60px] xl:mt-[15px] md:mt-[35px]"
 								>
 									На солнце, вдоль рядов кукурузы
 								</p>
-								<p class="mt-[15px] text-[14px] ml-1 text-[#999999]">
+								<p class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]">
 									18 марта · СБ · 12:00
 								</p>
-								<p class="mt-[15px] text-[14px] ml-1 text-[#999999]">
+								<p class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]">
 									ТРЕТЬЯКОВСКАЯ ГАЛЕРЕЯ
 								</p>
 								<a
@@ -991,14 +941,14 @@
 									</p>
 								</div>
 								<p
-									class="text-[20px] font-bold ml-1 max-w-[274px] mt-[60px] xl:mt-[15px]"
+									class="text-[20px] font-bold ml-1 max-w-[274px] lg:mt-[10px] mt-[60px] xl:mt-[15px] md:mt-[35px]"
 								>
 									На солнце, вдоль рядов кукурузы
 								</p>
-								<p class="mt-[15px] text-[14px] ml-1 text-[#999999]">
+								<p class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]">
 									18 марта · СБ · 12:00
 								</p>
-								<p class="mt-[15px] text-[14px] ml-1 text-[#999999]">
+								<p class="lg:mt-[10] mt-[15px] text-[14px] ml-1 text-[#999999]">
 									ТРЕТЬЯКОВСКАЯ ГАЛЕРЕЯ
 								</p>
 								<a
@@ -1133,7 +1083,7 @@
 			</footer>
 		</div>
 	</body>
-
+	<script src="./app.js" defer></script>
 	<script>
 		const swiper = new Swiper('.swiper', {
 			navigation: {

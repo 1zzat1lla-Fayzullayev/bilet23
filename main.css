@@ -271,3 +271,13 @@ input::-webkit-inner-spin-button {
 	color: #F71313; 
 }
 
+.today {
+    background-color: #F71313;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 31px;
+    height: 31px;
+}

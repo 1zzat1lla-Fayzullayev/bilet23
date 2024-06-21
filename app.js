@@ -145,3 +145,50 @@ document.addEventListener('DOMContentLoaded', function () {
 		controlToInput(toSlider, fromInput, toInput, toSlider)
 	)
 })
+
+document.addEventListener('DOMContentLoaded', function () {
+    const nextMonth = document.getElementById('nextMonth');
+    const monthYear = document.getElementById('monthYear');
+    const calendarDays = document.getElementById('calendarDays');
+    const datePickerToggle = document.getElementById('datePickerToggle');
+
+    let currentDate = new Date();
+    let today = new Date();
+
+    function renderCalendar() {
+        const year = currentDate.getFullYear();
+        const month = currentDate.getMonth();
+        const firstDay = (new Date(year, month, 1).getDay() + 6) % 7; // Adjust for Monday as first day
+        const lastDate = new Date(year, month + 1, 0).getDate();
+
+        monthYear.textContent = `${currentDate.toLocaleString('default', { month: 'long' })} ${year}`;
+
+        calendarDays.innerHTML = '';
+
+        let days = [];
+        for (let i = 0; i < firstDay; i++) {
+            days.push('<li></li>');
+        }
+        for (let i = 1; i <= lastDate; i++) {
+            if (year === today.getFullYear() && month === today.getMonth() && i === today.getDate()) {
+                days.push(`<li class="today">${i}</li>`);
+            } else {
+                days.push(`<li>${i}</li>`);
+            }
+        }
+
+        let weeks = [];
+        for (let i = 0; i < days.length; i += 7) {
+            weeks.push(`<ul class="flex items-center justify-between px-[15px] w-full">${days.slice(i, i + 7).join('')}</ul>`);
+        }
+
+        calendarDays.innerHTML = weeks.join('');
+    }
+
+    nextMonth.addEventListener('click', () => {
+        currentDate.setMonth(currentDate.getMonth() + 1);
+        renderCalendar();
+    });
+
+    renderCalendar();
+});
