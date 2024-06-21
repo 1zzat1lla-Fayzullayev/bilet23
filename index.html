@@ -53,7 +53,10 @@
 							src="./images/search.png"
 							alt="search"
 						/>
-						<div class="flex flex-col gap-1 w-[30px] cursor-pointer" id="hamburgerMenuToggle">
+						<div
+							class="flex flex-col gap-1 w-[30px] cursor-pointer"
+							id="hamburgerMenuToggle"
+						>
 							<span class="line h-[3px] w-[30px] rounded-md bg-white"></span>
 							<span class="line h-[3px] w-[30px] rounded-md bg-white"></span>
 							<span class="line h-[3px] w-[30px] rounded-md bg-white"></span>
@@ -66,16 +69,57 @@
 					>+7 999 123-45-67</a
 				>
 			</div>
-			<nav class="flex items-center justify-between max-w-[1160px] mx-auto lg:hidden">
-				<ul id="hamburgerMenu" class="hidden flex-col items-center justify-center gap-[20px]">
-					<li><a href="#" class="text-[18px] text-[#fff] hover:opacity-70">Спектакли</a></li>
-					<li><a href="#" class="text-[18px] text-[#fff] hover:opacity-70">Концерты</a></li>
-					<li><a href="#" class="text-[18px] text-[#fff] hover:opacity-70">Фестивали</a></li>
-					<li><a href="#" class="text-[18px] text-[#fff] hover:opacity-70">Мюзиклы</a></li>
-					<li><a href="#" class="text-[18px] text-[#fff] hover:opacity-70">Детям</a></li>
-					<li><a href="#" class="text-[18px] text-[#fff] hover:opacity-70">Классика</a></li>
-					<li><a href="tel:79991234567" class="text-[#fff] text-[18px] hover:underline">+7 999 123-45-67</a></li>
-					<li><a href="#" class="border border-white rounded-[30px] py-[11px] px-[27px] text-[18px] text-white hover:bg-white hover:text-[#F71313] transition-all">Подобрать мероприятие</a></li>
+			<nav
+				class="flex items-center justify-between max-w-[1160px] mx-auto lg:hidden"
+			>
+				<ul
+					id="hamburgerMenu"
+					class="hidden flex-col items-center justify-center gap-[20px]"
+				>
+					<li>
+						<a href="#" class="text-[18px] text-[#fff] hover:opacity-70"
+							>Спектакли</a
+						>
+					</li>
+					<li>
+						<a href="#" class="text-[18px] text-[#fff] hover:opacity-70"
+							>Концерты</a
+						>
+					</li>
+					<li>
+						<a href="#" class="text-[18px] text-[#fff] hover:opacity-70"
+							>Фестивали</a
+						>
+					</li>
+					<li>
+						<a href="#" class="text-[18px] text-[#fff] hover:opacity-70"
+							>Мюзиклы</a
+						>
+					</li>
+					<li>
+						<a href="#" class="text-[18px] text-[#fff] hover:opacity-70"
+							>Детям</a
+						>
+					</li>
+					<li>
+						<a href="#" class="text-[18px] text-[#fff] hover:opacity-70"
+							>Классика</a
+						>
+					</li>
+					<li>
+						<a
+							href="tel:79991234567"
+							class="text-[#fff] text-[18px] hover:underline"
+							>+7 999 123-45-67</a
+						>
+					</li>
+					<li>
+						<a
+							href="#"
+							class="border border-white rounded-[30px] py-[11px] px-[27px] text-[18px] text-white hover:bg-white hover:text-[#F71313] transition-all"
+							>Подобрать мероприятие</a
+						>
+					</li>
 				</ul>
 			</nav>
 			<div class="flex justify-center items-center">
@@ -284,17 +328,25 @@
 					<div
 						class="mt-[40px] flex flex-col-reverse sm:flex-row items-center md:items-start gap-5 sm:gap-0 sm:items-center justify-between"
 					>
-					<div class="flex items-center justify-center md:justify-start gap-[10px] w-full">
-						<p id="datePickerToggle" class="button py-[10px] w-[145px] px-[24px] flex items-center justify-center gap-[6px] rounded-[19px] hover:bg-[#D8D8D8] cursor-pointer bg-[#EBEBEB] text-[#A5A5A5]">
-							Дата
-							<img src="./images/date.svg" alt="date" />
-						</p>
-						<p id="priceButton" class="button py-[10px] w-[145px] px-[24px] flex items-center justify-center gap-[6px] rounded-[19px] hover:bg-[#D8D8D8] cursor-pointer bg-[#EBEBEB] text-[#A5A5A5] active">
-							Цена
-							<img src="./images/price.svg" alt="price" />
-						</p>
-					</div>
-					
+						<div
+							class="flex items-center justify-center md:justify-start gap-[10px] w-full"
+						>
+							<p
+								id="datePickerToggle"
+								class="button py-[10px] w-[145px] px-[24px] flex items-center justify-center gap-[6px] rounded-[19px] hover:bg-[#D8D8D8] cursor-pointer bg-[#EBEBEB] text-[#A5A5A5]"
+							>
+								Дата
+								<img src="./images/date.svg" alt="date" />
+							</p>
+							<p
+								id="priceButton"
+								class="button py-[10px] w-[145px] px-[24px] flex items-center justify-center gap-[6px] rounded-[19px] hover:bg-[#D8D8D8] cursor-pointer bg-[#EBEBEB] text-[#A5A5A5] active"
+							>
+								Цена
+								<img src="./images/price.svg" alt="price" />
+							</p>
+						</div>
+
 						<div id="calendar" class="hidden">
 							<div id="datePicker">
 								<div
@@ -434,62 +486,67 @@
 							</div>
 						</div>
 					</div>
-
-					<div id="priceRangeModal" class="hidden">
-						<div class="modal-content relative">
-							<img
-								src="./images/close_modal.png"
-								alt="close"
-								class="cursor-pointer absolute right-3 top-3 close"
-								id="closePriceRangeModal"
-							/>
-							<div class="range_container">
-								<h2 class="text-center font-semibold my-3">Цена</h2>
-								<div class="form_control mb-[30px] flex gap-5">
-									<div
-										class="form_control_container flex items-center w-[150px] h-[40px] rounded-full bg-[#EBEBEB] text-[#635a5a] px-[30px] gap-2"
-									>
-										<h3 class="form_control_container__time text-[17px]">От</h3>
+					<div id="price" class="hidden">
+						<div id="priceRangeModal">
+							<div class="modal-content relative">
+								<img
+									src="./images/close_modal.png"
+									alt="close"
+									class="cursor-pointer absolute right-3 top-3 close"
+									id="closePriceRangeModal"
+								/>
+								<div class="range_container">
+									<h2 class="text-center font-semibold my-3">Цена</h2>
+									<div class="form_control mb-[30px] flex gap-5">
+										<div
+											class="form_control_container flex items-center w-[150px] h-[40px] rounded-full bg-[#EBEBEB] text-[#635a5a] px-[30px] gap-2"
+										>
+											<h3 class="form_control_container__time text-[17px]">
+												От
+											</h3>
+											<input
+												class="form_control_container__time__input text-[16px] text-[#635a5a]"
+												type="number"
+												id="fromInput"
+												value="22"
+												min="0"
+												max="100"
+												disabled
+											/>
+										</div>
+										<div
+											class="form_control_container flex items-center w-[150px] h-[40px] rounded-full bg-[#EBEBEB] text-[#635a5a] px-[30px] gap-2"
+										>
+											<h3 class="form_control_container__time text-[17px]">
+												До
+											</h3>
+											<input
+												class="form_control_container__time__input text-[16px] text-[#635a5a]"
+												type="number"
+												id="toInput"
+												value="100"
+												min="0"
+												max="100"
+												disabled
+											/>
+										</div>
+									</div>
+									<div class="sliders_control">
 										<input
-											class="form_control_container__time__input text-[16px] text-[#635a5a]"
-											type="number"
-											id="fromInput"
-											value="22"
+											id="fromSlider"
+											type="range"
+											value="10"
 											min="0"
 											max="100"
-											disabled
 										/>
-									</div>
-									<div
-										class="form_control_container flex items-center w-[150px] h-[40px] rounded-full bg-[#EBEBEB] text-[#635a5a] px-[30px] gap-2"
-									>
-										<h3 class="form_control_container__time text-[17px]">До</h3>
 										<input
-											class="form_control_container__time__input text-[16px] text-[#635a5a]"
-											type="number"
-											id="toInput"
-											value="100"
+											id="toSlider"
+											type="range"
+											value="40"
 											min="0"
 											max="100"
-											disabled
 										/>
 									</div>
-								</div>
-								<div class="sliders_control">
-									<input
-										id="fromSlider"
-										type="range"
-										value="10"
-										min="0"
-										max="100"
-									/>
-									<input
-										id="toSlider"
-										type="range"
-										value="40"
-										min="0"
-										max="100"
-									/>
 								</div>
 							</div>
 						</div>

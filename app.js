@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
 	const datePickerToggle = document.getElementById('datePickerToggle')
 	const calendar = document.getElementById('calendar')
+	const price = document.getElementById('price')
 	const closeCalendarModal = document.getElementById('closeCalendarModal')
 	const priceButton = document.getElementById('priceButton')
 	const priceRangeModal = document.getElementById('priceRangeModal')
@@ -19,8 +20,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 
 	priceButton.addEventListener('click', function () {
-		priceRangeModal.style.display = 'block'
-		priceButton.classList.add('active')
+		price.classList.toggle('hidden')
+		priceButton.classList.toggle('active')
 	})
 
 	closePriceRangeModal.addEventListener('click', function () {
