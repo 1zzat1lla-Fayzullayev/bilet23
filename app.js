@@ -147,48 +147,87 @@ document.addEventListener('DOMContentLoaded', function () {
 })
 
 document.addEventListener('DOMContentLoaded', function () {
-    const nextMonth = document.getElementById('nextMonth');
-    const monthYear = document.getElementById('monthYear');
-    const calendarDays = document.getElementById('calendarDays');
-    const datePickerToggle = document.getElementById('datePickerToggle');
+	const nextMonth = document.getElementById('nextMonth')
+	const prevMonth = document.getElementById('prevMonth')
+	const nextYear = document.getElementById('nextYear')
+	const prevYear = document.getElementById('prevYear')
+	const monthYear = document.getElementById('monthYear')
+	const calendarDays = document.getElementById('calendarDays')
+	const closeModal = document.getElementById('closeCalendarModal')
+	const datePickerToggle = document.getElementById('datePickerToggle')
 
-    let currentDate = new Date();
-    let today = new Date();
+	let currentDate = new Date()
+	let today = new Date()
 
-    function renderCalendar() {
-        const year = currentDate.getFullYear();
-        const month = currentDate.getMonth();
-        const firstDay = (new Date(year, month, 1).getDay() + 6) % 7; // Adjust for Monday as first day
-        const lastDate = new Date(year, month + 1, 0).getDate();
+	function renderCalendar() {
+		const year = currentDate.getFullYear()
+		const month = currentDate.getMonth()
+		const firstDay = (new Date(year, month, 1).getDay() + 6) % 7 // Adjust for Monday as first day
+		const lastDate = new Date(year, month + 1, 0).getDate()
 
-        monthYear.textContent = `${currentDate.toLocaleString('default', { month: 'long' })} ${year}`;
+		monthYear.textContent = `${currentDate.toLocaleString('default', {
+			month: 'long',
+		})} ${year}`
 
-        calendarDays.innerHTML = '';
+		calendarDays.innerHTML = ''
 
-        let days = [];
-        for (let i = 0; i < firstDay; i++) {
-            days.push('<li></li>');
-        }
-        for (let i = 1; i <= lastDate; i++) {
-            if (year === today.getFullYear() && month === today.getMonth() && i === today.getDate()) {
-                days.push(`<li class="today">${i}</li>`);
-            } else {
-                days.push(`<li>${i}</li>`);
-            }
-        }
+		let days = []
+		for (let i = 0; i < firstDay; i++) {
+			days.push('<li></li>')
+		}
+		for (let i = 1; i <= lastDate; i++) {
+			if (
+				year === today.getFullYear() &&
+				month === today.getMonth() &&
+				i === today.getDate()
+			) {
+				days.push(`<li class="today">${i}</li>`)
+			} else {
+				days.push(`<li>${i}</li>`)
+			}
+		}
 
-        let weeks = [];
-        for (let i = 0; i < days.length; i += 7) {
-            weeks.push(`<ul class="flex items-center justify-between px-[15px] w-full">${days.slice(i, i + 7).join('')}</ul>`);
-        }
+		// Ensure the calendar grid has 6 weeks for consistency
+		while (days.length % 7 !== 0) {
+			days.push('<li></li>')
+		}
+		if (days.length < 42) {
+			while (days.length < 42) {
+				days.push('<li></li>')
+			}
+		}
 
-        calendarDays.innerHTML = weeks.join('');
-    }
+		let weeks = []
+		for (let i = 0; i < days.length; i += 7) {
+			weeks.push(
+				`<ul class="flex items-center justify-between px-[15px] w-full">${days
+					.slice(i, i + 7)
+					.join('')}</ul>`
+			)
+		}
 
-    nextMonth.addEventListener('click', () => {
-        currentDate.setMonth(currentDate.getMonth() + 1);
-        renderCalendar();
-    });
+		calendarDays.innerHTML = weeks.join('')
+	}
 
-    renderCalendar();
-});
+	nextMonth.addEventListener('click', () => {
+		currentDate.setMonth(currentDate.getMonth() + 1)
+		renderCalendar()
+	})
+
+	prevMonth.addEventListener('click', () => {
+		currentDate.setMonth(currentDate.getMonth() - 1)
+		renderCalendar()
+	})
+
+	nextYear.addEventListener('click', () => {
+		currentDate.setFullYear(currentDate.getFullYear() + 1)
+		renderCalendar()
+	})
+
+	prevYear.addEventListener('click', () => {
+		currentDate.setFullYear(currentDate.getFullYear() - 1)
+		renderCalendar()
+	})
+
+	renderCalendar()
+})
