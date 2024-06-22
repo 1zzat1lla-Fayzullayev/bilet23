@@ -146,6 +146,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	)
 })
 
+
+
 document.addEventListener('DOMContentLoaded', function () {
 	const nextMonth = document.getElementById('nextMonth')
 	const prevMonth = document.getElementById('prevMonth')
@@ -153,16 +155,20 @@ document.addEventListener('DOMContentLoaded', function () {
 	const prevYear = document.getElementById('prevYear')
 	const monthYear = document.getElementById('monthYear')
 	const calendarDays = document.getElementById('calendarDays')
-	const closeModal = document.getElementById('closeCalendarModal')
 	const datePickerToggle = document.getElementById('datePickerToggle')
 
 	let currentDate = new Date()
 	let today = new Date()
 
+	function handleDateSelection(day) {
+		localStorage.setItem('selectedDay', day)
+		datePickerToggle.textContent = `Дата: ${day}`
+	}
+
 	function renderCalendar() {
 		const year = currentDate.getFullYear()
 		const month = currentDate.getMonth()
-		const firstDay = (new Date(year, month, 1).getDay() + 6) % 7 // Adjust for Monday as first day
+		const firstDay = (new Date(year, month, 1).getDay() + 6) % 7
 		const lastDate = new Date(year, month + 1, 0).getDate()
 
 		monthYear.textContent = `${currentDate.toLocaleString('default', {
@@ -181,18 +187,17 @@ document.addEventListener('DOMContentLoaded', function () {
 				month === today.getMonth() &&
 				i === today.getDate()
 			) {
-				days.push(`<li class="today">${i}</li>`)
+				days.push(`<li class="today cursor-pointer " data-day="${i}">${i}</li>`)
 			} else {
-				days.push(`<li>${i}</li>`)
+				days.push(`<li class="cursor-pointer " data-day="${i}">${i}</li>`)
 			}
 		}
 
-		// Ensure the calendar grid has 6 weeks for consistency
 		while (days.length % 7 !== 0) {
 			days.push('<li></li>')
 		}
-		if (days.length < 42) {
-			while (days.length < 42) {
+		if (days.length < 32) {
+			while (days.length < 32) {
 				days.push('<li></li>')
 			}
 		}
@@ -207,6 +212,15 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 
 		calendarDays.innerHTML = weeks.join('')
+
+		document
+			.querySelectorAll('#calendarDays li[data-day]')
+			.forEach(dayElement => {
+				dayElement.addEventListener('click', function () {
+					const day = this.getAttribute('data-day')
+					handleDateSelection(day)
+				})
+			})
 	}
 
 	nextMonth.addEventListener('click', () => {
@@ -228,6 +242,11 @@ document.addEventListener('DOMContentLoaded', function () {
 		currentDate.setFullYear(currentDate.getFullYear() - 1)
 		renderCalendar()
 	})
+
+	const storedDay = localStorage.getItem('selectedDay')
+	if (storedDay) {
+		datePickerToggle.textContent = `Дата: ${storedDay}`
+	}
 
 	renderCalendar()
 })

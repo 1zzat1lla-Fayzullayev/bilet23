@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>BILET23.RU</title>
+		<link rel="stylesheet" href="./main.css" />
+		<link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+		/>
+
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	</head>
+	<body class="font-[Commissioner] lg:px-0 !overflow-x-hidden">
+		<header class="bg-[#F71313]">
+			<div
+				class="px-10 xl:px-0 max-w-[1160px] mx-auto py-[25px] flex items-center justify-between"
+			>
+				<div class="flex items-center justify-start gap-[15px]">
+					<img
+						src="./images/logo.png"
+						alt="logo"
+						class="size-[25px] sm:size-auto"
+					/>
+					<h1 class="font-medium text-[#fff] text-[20px] sm:text-[36px]">
+						BILET23.RU
+					</h1>
+				</div>
+				<div
+					class="bg-transparent lg:bg-[#FFFFFF] rounded-[30px] py-[18px] flex items-center justify-between px-[24px]"
+				>
+					<input
+						type="text"
+						class="hidden lg:flex w-[400px] lg:w-[650px] outline-0 border-0 text-[18px]"
+						placeholder="Поиск по мероприятиям"
+					/>
+					<img
+						class="hidden w-[15px] h-[16px] xl:flex"
+						src="./images/search.svg"
+						alt="search"
+					/>
+					<div class="flex lg:hidden gap-5 ml-14">
+						<img
+							class="flex lg:hidden size-[18px]"
+							src="./images/search.png"
+							alt="search"
+						/>
+						<div
+							class="flex flex-col gap-1 w-[30px] cursor-pointer"
+							id="hamburgerMenuToggle"
+						>
+							<span class="line h-[3px] w-[30px] rounded-md bg-white"></span>
+							<span class="line h-[3px] w-[30px] rounded-md bg-white"></span>
+							<span class="line h-[3px] w-[30px] rounded-md bg-white"></span>
+						</div>
+					</div>
+				</div>
+				<a
+					href="tel:79991234567"
+					class="hidden xl:flex text-[#fff] text-[18px] hover:underline"
+					>+7 999 123-45-67</a
+				>
+			</div>
+			<nav
+				class="flex items-center justify-between max-w-[1160px] mx-auto lg:hidden"
+			>
+				<ul
+					id="hamburgerMenu"
+					class="hidden flex-col items-center justify-center gap-[20px]"
+				>
+					<li>
+						<a href="#" class="text-[18px] text-[#fff] hover:opacity-70"
+							>Спектакли</a
+						>
+					</li>
+					<li>
+						<a href="#" class="text-[18px] text-[#fff] hover:opacity-70"
+							>Концерты</a
+						>
+					</li>
+					<li>
+						<a href="#" class="text-[18px] text-[#fff] hover:opacity-70"
+							>Фестивали</a
+						>
+					</li>
+					<li>
+						<a href="#" class="text-[18px] text-[#fff] hover:opacity-70"
+							>Мюзиклы</a
+						>
+					</li>
+					<li>
+						<a href="#" class="text-[18px] text-[#fff] hover:opacity-70"
+							>Детям</a
+						>
+					</li>
+					<li>
+						<a href="#" class="text-[18px] text-[#fff] hover:opacity-70"
+							>Классика</a
+						>
+					</li>
+					<li>
+						<a
+							href="tel:79991234567"
+							class="text-[#fff] text-[18px] hover:underline"
+							>+7 999 123-45-67</a
+						>
+					</li>
+					<li>
+						<a
+							href="#"
+							class="border border-white rounded-[30px] py-[11px] px-[27px] text-[18px] text-white hover:bg-white hover:text-[#F71313] transition-all"
+							>Подобрать мероприятие</a
+						>
+					</li>
+				</ul>
+			</nav>
+			<div class="flex justify-center items-center">
+				<div
+					class="lg:flex max-w-[1160px] w-full justify-between py-[10px] hidden"
+				>
+					<div
+						class="hidden lg:flex px-[30px] xl:px-0 items-center justify-start gap-[40px]"
+					>
+						<a href="#" class="text-[18px] text-[#fff] hover:opacity-70"
+							>Спектакли</a
+						>
+						<a href="#" class="text-[18px] text-[#fff] hover:opacity-70"
+							>Концерты</a
+						>
+						<a href="#" class="text-[18px] text-[#fff] hover:opacity-70"
+							>Фестивали</a
+						>
+						<a href="#" class="text-[18px] text-[#fff] hover:opacity-70"
+							>Мюзиклы</a
+						>
+						<a href="#" class="text-[18px] text-[#fff] hover:opacity-70"
+							>Детям</a
+						>
+						<a href="#" class="text-[18px] text-[#fff] hover:opacity-70"
+							>Классика</a
+						>
+					</div>
+					<a
+						href="#"
+						class="hidden lg:flex border border-white rounded-[30px] py-[11px] px-[27px] text-[18px] text-white hover:bg-white hover:text-[#F71313] transition-all"
+						>Подобрать мероприятие</a
+					>
+				</div>
+			</div>
+		</header>
+	</body>
+	<script src="./app.js" defer></script>
+</html>
