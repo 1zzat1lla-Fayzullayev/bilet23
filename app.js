@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	closeCalendarModal.addEventListener('click', function () {
 		calendar.classList.add('hidden')
 		datePickerToggle.classList.remove('active')
-		datePickerToggle.classList.remove('active')
 		dataImg.src = './images/date.svg'
 	})
 
@@ -146,8 +145,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	)
 })
 
-
-
 document.addEventListener('DOMContentLoaded', function () {
 	const nextMonth = document.getElementById('nextMonth')
 	const prevMonth = document.getElementById('prevMonth')
@@ -156,13 +153,18 @@ document.addEventListener('DOMContentLoaded', function () {
 	const monthYear = document.getElementById('monthYear')
 	const calendarDays = document.getElementById('calendarDays')
 	const datePickerToggle = document.getElementById('datePickerToggle')
+	const calendarModal = document.getElementById('calendar')
+	const closeCalendarModal = document.getElementById('closeCalendarModal')
 
 	let currentDate = new Date()
 	let today = new Date()
 
 	function handleDateSelection(day) {
-		localStorage.setItem('selectedDay', day)
-		datePickerToggle.textContent = `Дата: ${day}`
+		const month = currentDate.toLocaleString('default', { month: 'long' })
+		const selectedDate = `${day} ${month}`
+		localStorage.setItem('selectedDay', selectedDate)
+		datePickerToggle.textContent = `Дата: ${selectedDate}`
+		calendarModal.classList.add('hidden')
 	}
 
 	function renderCalendar() {
@@ -182,14 +184,10 @@ document.addEventListener('DOMContentLoaded', function () {
 			days.push('<li></li>')
 		}
 		for (let i = 1; i <= lastDate; i++) {
-			if (
-				year === today.getFullYear() &&
-				month === today.getMonth() &&
-				i === today.getDate()
-			) {
-				days.push(`<li class="today cursor-pointer " data-day="${i}">${i}</li>`)
+			if (month === today.getMonth() && i === today.getDate()) {
+				days.push(`<li class="today cursor-pointer" data-day="${i}">${i}</li>`)
 			} else {
-				days.push(`<li class="cursor-pointer " data-day="${i}">${i}</li>`)
+				days.push(`<li class="cursor-pointer" data-day="${i}">${i}</li>`)
 			}
 		}
 
@@ -241,6 +239,14 @@ document.addEventListener('DOMContentLoaded', function () {
 	prevYear.addEventListener('click', () => {
 		currentDate.setFullYear(currentDate.getFullYear() - 1)
 		renderCalendar()
+	})
+
+	closeCalendarModal.addEventListener('click', () => {
+		calendarModal.classList.add('hidden')
+	})
+
+	datePickerToggle.addEventListener('click', () => {
+		calendarModal.classList.remove('hidden')
 	})
 
 	const storedDay = localStorage.getItem('selectedDay')

@@ -225,6 +225,7 @@ input::-webkit-inner-spin-button {
 	}
 }
 
+
 @media screen and (max-width: 768px) {
 	#priceRangeModal {
 		left: -6%;
@@ -301,7 +302,6 @@ input::-webkit-inner-spin-button {
 	background-color: #f71313;
 	color: white;
 }
-
 
 .hidden {
 	display: none;
