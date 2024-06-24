@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		selectedMonth = month
 		selectedYear = year
 		calendarModal.classList.add('hidden')
-		renderCalendar() // Re-render calendar to update the selected day's appearance
+		renderCalendar()
 	}
 
 	function renderCalendar() {
@@ -193,23 +193,25 @@ document.addEventListener('DOMContentLoaded', function () {
 			days.push('<li></li>')
 		}
 		for (let i = 1; i <= lastDate; i++) {
+			const dayOfWeek = (firstDay + i - 1) % 7
+			let dayClass = 'cursor-pointer'
 			if (
 				month === today.getMonth() &&
 				i === today.getDate() &&
 				year === today.getFullYear()
 			) {
-				days.push(`<li class="today cursor-pointer" data-day="${i}">${i}</li>`)
+				dayClass += ' today'
 			} else if (
 				i == selectedDay &&
 				month === selectedMonth &&
 				year === selectedYear
 			) {
-				days.push(
-					`<li class="selected-day cursor-pointer" data-day="${i}">${i}</li>`
-				)
-			} else {
-				days.push(`<li class="cursor-pointer" data-day="${i}">${i}</li>`)
+				dayClass += ' selected-day'
 			}
+			if (dayOfWeek === 5 || dayOfWeek === 6) {
+				dayClass += ' weekend'
+			}
+			days.push(`<li class="${dayClass}" data-day="${i}">${i}</li>`)
 		}
 
 		while (days.length % 7 !== 0) {

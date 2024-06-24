@@ -424,20 +424,22 @@
 						<div
 							class="flex items-center justify-center md:justify-end w-full gap-[10px]"
 						>
-							<div class="flex items-center gap-[10px]">
+							<div
+								class="flex items-center justify-center md:justify-start gap-[10px] w-full"
+							>
 								<p
-									id="sortByDate"
-									class="py-[10px] text-[16px] w-[145px] px-[24px] flex items-center justify-center gap-[6px] rounded-[19px] hover:bg-[#D8D8D8] cursor-pointer bg-[#EBEBEB] text-[#A5A5A5]"
+									id="datePickerToggle"
+									class="button py-[10px] max-w-[160px] px-[24px] flex items-center justify-center gap-[6px] rounded-[19px] hover:bg-[#D8D8D8] cursor-pointer bg-[#EBEBEB] text-[#A5A5A5]"
 								>
-									По дате
-									<img src="./images/arrow.svg" alt="date" />
+									Дата
+									<img src="./images/date.svg" alt="date" />
 								</p>
 								<p
-									id="sortByPrice"
-									class="py-[10px] text-[16px] w-[145px] px-[24px] flex items-center justify-center gap-[6px] rounded-[19px] hover:bg-[#D8D8D8] cursor-pointer bg-[#EBEBEB] text-[#A5A5A5]"
+									id="priceButton"
+									class="button py-[10px] w-[145px] px-[24px] flex items-center justify-center gap-[6px] rounded-[19px] hover:bg-[#D8D8D8] cursor-pointer bg-[#EBEBEB] text-[#A5A5A5]"
 								>
-									По цене
-									<img src="./images/arrow.svg" alt="date" />
+									Цена
+									<img src="./images/price.svg" alt="price" />
 								</p>
 							</div>
 
@@ -473,13 +475,12 @@
 												От
 											</h3>
 											<input
-												class="form_control_container__time__input text-[16px] text-[#635a5a]"
+												class="form_control_container__time__input text-[16px] outline-none text-[#635a5a]"
 												type="number"
 												id="fromInput"
 												value="22"
 												min="0"
-												max="100"
-												disabled
+												max="1500"
 											/>
 										</div>
 										<div
@@ -489,13 +490,12 @@
 												До
 											</h3>
 											<input
-												class="form_control_container__time__input text-[16px] text-[#635a5a]"
+												class="form_control_container__time__input text-[16px] outline-none text-[#635a5a]"
 												type="number"
 												id="toInput"
-												value="100"
+												value="1500"
 												min="0"
-												max="100"
-												disabled
+												max="1500"
 											/>
 										</div>
 									</div>
@@ -519,7 +519,6 @@
 							</div>
 						</div>
 					</div>
-
 					<div id="itemsContainer" class="mt-[20px]"></div>
 
 					<div>
@@ -988,7 +987,9 @@
 			</div>
 		</div>
 		<div class="max-w-[1160px] mx-auto">
-			<h2 class="text-[32px] font-semibold mt-[60px] mx-[20px] lg:mx-0">Мероприятие</h2>
+			<h2 class="text-[32px] font-semibold mt-[60px] mx-[20px] lg:mx-0">
+				Мероприятие
+			</h2>
 			<img
 				src="./images/Mask group.png"
 				alt="404"
@@ -996,12 +997,18 @@
 				style="width: calc(100% - 30px)"
 			/>
 			<div class="mx-[20px] lg:mx-0">
-				<h2 class="text-[18px] md:text-[24px] lg:text-[32px] font-semibold mt-[40px]">
+				<h2
+					class="text-[18px] md:text-[24px] lg:text-[32px] font-semibold mt-[40px]"
+				>
 					Концерт «Органный фестиваль. Даниэль Сальвадор»
 				</h2>
-				<p class="text-[14px] lg:text-[18px]">18 марта · СБ · 12:00 · 2023 · Театр · Детям</p>
+				<p class="text-[14px] lg:text-[18px]">
+					18 марта · СБ · 12:00 · 2023 · Театр · Детям
+				</p>
 			</div>
-			<div class="flex items-center gap-[10px] mt-[30px] mb-[60px] mx-[20px] lg:mx-0">
+			<div
+				class="flex items-center gap-[10px] mt-[30px] mb-[60px] mx-[20px] lg:mx-0"
+			>
 				<button
 					class="w-[145px] h-[45px] rounded-[50px] bg-[#F71313] text-white"
 				>
@@ -1042,60 +1049,64 @@
 			<footer class="mt-[60px] pb-[90px]">
 				<div class="md:block">
 					<div
-						class="max-w-[1160px] mx-auto flex justify-between items-start flex-col md:flex-row"
+						class="max-w-[1160px] mx-auto flex justify-between items-start flex-col lg:flex-row"
 					>
-						<div class="flex items-start flex-col">
-							<p class="text-[#C2C2C2] text-[14px] md:text-[18px] uppercase">
-								О нас
-							</p>
+						<div
+							class="flex flex-col items-start md:gap-[70px] md:flex-row justify-between lg:gap-[140px]"
+						>
+							<div class="flex items-start flex-col">
+								<p class="text-[#C2C2C2] text-[14px] md:text-[18px] uppercase">
+									О нас
+								</p>
 
-							<a
-								href="#"
-								class="text-[14px] md:text-[18px] hover:underline mt-[5px]"
-								>О компании</a
-							>
-							<a
-								href="#"
-								class="text-[14px] md:text-[18px] hover:underline mt-[10px]"
-								>Вакансии</a
-							>
-							<a
-								href="#"
-								class="text-[14px] md:text-[18px] hover:underline mt-[10px]"
-								>Реквизиты</a
-							>
-							<a
-								href="#"
-								class="text-[14px] md:text-[18px] hover:underline mt-[10px]"
-								>Контакты</a
-							>
+								<a
+									href="#"
+									class="text-[14px] md:text-[18px] hover:underline mt-[5px]"
+									>О компании</a
+								>
+								<a
+									href="#"
+									class="text-[14px] md:text-[18px] hover:underline mt-[10px]"
+									>Вакансии</a
+								>
+								<a
+									href="#"
+									class="text-[14px] md:text-[18px] hover:underline mt-[10px]"
+									>Реквизиты</a
+								>
+								<a
+									href="#"
+									class="text-[14px] md:text-[18px] hover:underline mt-[10px]"
+									>Контакты</a
+								>
+							</div>
+
+							<div class="flex items-start flex-col mt-[30px] md:mt-0">
+								<p
+									class="text-[#C2C2C2] text-[14px] md:text-[18px] uppercase mt-[30px] md:mt-0"
+								>
+									Посетителям
+								</p>
+
+								<a
+									href="#"
+									class="text-[14px] md:text-[18px] hover:underline mt-[5px]"
+									>Часто задаваемые вопросы</a
+								>
+								<a
+									href="#"
+									class="text-[14px] md:text-[18px] hover:underline mt-[10px]"
+									>Как заказать билеты</a
+								>
+								<a
+									href="#"
+									class="text-[14px] md:text-[18px] hover:underline mt-[10px]"
+									>Возврат билетов</a
+								>
+							</div>
 						</div>
 
-						<div class="flex items-start flex-col">
-							<p
-								class="text-[#C2C2C2] text-[14px] md:text-[18px] uppercase mt-[30px] md:mt-0"
-							>
-								Посетителям
-							</p>
-
-							<a
-								href="#"
-								class="text-[14px] md:text-[18px] hover:underline mt-[5px]"
-								>Часто задаваемые вопросы</a
-							>
-							<a
-								href="#"
-								class="text-[14px] md:text-[18px] hover:underline mt-[10px]"
-								>Как заказать билеты</a
-							>
-							<a
-								href="#"
-								class="text-[14px] md:text-[18px] hover:underline mt-[10px]"
-								>Возврат билетов</a
-							>
-						</div>
-
-						<div class="flex items-start flex-col">
+						<div class="flex items-start flex-col mt-[40px] lg:mt-0">
 							<p
 								class="text-[#C2C2C2] text-[14px] md:text-[18px] uppercase mt-[30px] md:mt-0"
 							>
@@ -1119,7 +1130,7 @@
 							>
 						</div>
 						<div
-							class="flex items-center justify-start gap-[10px] mt-[30px] md:mt-0"
+							class="flex items-center justify-start gap-[10px] mt-[30px] md:mt-[100px]"
 						>
 							<img src="./images/tg.png" alt="tg" />
 							<img src="./images/whatsapp.png" alt="whatsapp" />
