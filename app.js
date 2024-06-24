@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-	const hamburgerMenuToggle = document.getElementById('hamburgerMenuToggle')
-	const hamburgerMenu = document.getElementById('hamburgerMenu')
+	const hamburgerMenuToggle = document.querySelector('#hamburgerMenuToggle')
+	const hamburgerMenu = document.querySelector('#hamburgerMenu')
 	const datePickerToggle = document.getElementById('datePickerToggle')
 	const closeCalendarModal = document.getElementById('closeCalendarModal')
 	const priceButton = document.getElementById('priceButton')
@@ -158,13 +158,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	let currentDate = new Date()
 	let today = new Date()
+	let selectedDay = null
+	let selectedMonth = null
+	let selectedYear = null
 
 	function handleDateSelection(day) {
-		const month = currentDate.toLocaleString('default', { month: 'long' })
-		const selectedDate = `${day} ${month}`
-		localStorage.setItem('selectedDay', selectedDate)
+		const month = currentDate.getMonth()
+		const year = currentDate.getFullYear()
+		const monthName = currentDate.toLocaleString('default', { month: 'long' })
+		const selectedDate = `${day} ${monthName}`
+		localStorage.setItem('selectedDay', JSON.stringify({ day, month, year }))
 		datePickerToggle.textContent = `Дата: ${selectedDate}`
+		selectedDay = day
+		selectedMonth = month
+		selectedYear = year
 		calendarModal.classList.add('hidden')
+		renderCalendar() // Re-render calendar to update the selected day's appearance
 	}
 
 	function renderCalendar() {
@@ -184,8 +193,20 @@ document.addEventListener('DOMContentLoaded', function () {
 			days.push('<li></li>')
 		}
 		for (let i = 1; i <= lastDate; i++) {
-			if (month === today.getMonth() && i === today.getDate()) {
+			if (
+				month === today.getMonth() &&
+				i === today.getDate() &&
+				year === today.getFullYear()
+			) {
 				days.push(`<li class="today cursor-pointer" data-day="${i}">${i}</li>`)
+			} else if (
+				i == selectedDay &&
+				month === selectedMonth &&
+				year === selectedYear
+			) {
+				days.push(
+					`<li class="selected-day cursor-pointer" data-day="${i}">${i}</li>`
+				)
 			} else {
 				days.push(`<li class="cursor-pointer" data-day="${i}">${i}</li>`)
 			}
@@ -251,7 +272,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	const storedDay = localStorage.getItem('selectedDay')
 	if (storedDay) {
-		datePickerToggle.textContent = `Дата: ${storedDay}`
+		const { day, month, year } = JSON.parse(storedDay)
+		const monthName = new Date(year, month).toLocaleString('default', {
+			month: 'long',
+		})
+		datePickerToggle.textContent = `Дата: ${day} ${monthName}`
+		selectedDay = day
+		selectedMonth = month
+		selectedYear = year
 	}
 
 	renderCalendar()

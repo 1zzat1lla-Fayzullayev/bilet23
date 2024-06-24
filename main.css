@@ -225,7 +225,6 @@ input::-webkit-inner-spin-button {
 	}
 }
 
-
 @media screen and (max-width: 768px) {
 	#priceRangeModal {
 		left: -6%;
@@ -305,4 +304,9 @@ input::-webkit-inner-spin-button {
 
 .hidden {
 	display: none;
+}
+
+.selected-day {
+	border: 2px solid red;
+	border-radius: 50%;
 }
