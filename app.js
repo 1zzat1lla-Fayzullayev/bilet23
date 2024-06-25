@@ -286,3 +286,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	renderCalendar()
 })
+
+const swiper = new Swiper('.swiper', {
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+	on: {
+		init: function () {
+			document.querySelector(
+				'.swiper-slide-active .slide-content'
+			).style.opacity = '1'
+		},
+		slideChange: function () {
+			const slides = document.querySelectorAll('.swiper-slide .slide-content')
+			slides.forEach(slide => (slide.style.opacity = '0'))
+			document.querySelector(
+				'.swiper-slide-active .slide-content'
+			).style.opacity = '1'
+		},
+	},
+})

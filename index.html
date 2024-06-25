@@ -160,7 +160,7 @@
 			<div class="swiper h-96">
 				<div class="swiper-wrapper max-w-[1160px] mx-auto">
 					<div class="swiper-slide">
-						<div class="relative md:mx-0 mx-[20px]">
+						<div class="relative md:mx-0 mx-[20px] slide-content">
 							<img
 								src="./images/slider1.png"
 								alt="image"
@@ -191,9 +191,8 @@
 							</p>
 						</div>
 					</div>
-
 					<div class="swiper-slide">
-						<div class="relative mx-[20px]">
+						<div class="relative mx-[20px] slide-content">
 							<img
 								src="./images/slider2.png"
 								alt="image"
@@ -225,7 +224,6 @@
 						</div>
 					</div>
 				</div>
-
 				<div class="swiper-button-prev -ml-2"></div>
 				<div class="swiper-button-next"></div>
 			</div>
@@ -429,17 +427,17 @@
 							<div class="flex items-center gap-[10px]">
 								<p
 									id="sortByDate"
-									class="py-[10px] text-[16px] w-[145px] px-[24px] flex items-center justify-center gap-[6px] rounded-[19px] hover:bg-[#D8D8D8] cursor-pointer bg-[#EBEBEB] text-[#A5A5A5]"
+									class="arrow py-[10px] text-[16px] w-[145px] px-[24px] flex items-center justify-center gap-[12px] rounded-[19px] hover:bg-[#D8D8D8] cursor-pointer bg-[#EBEBEB] text-[#A5A5A5]"
 								>
 									По дате
-									<img src="./images/arrow.svg" alt="date" />
+									<img src="./images/arrow.svg" alt="date" class="arrow_img" />
 								</p>
 								<p
 									id="sortByPrice"
-									class="py-[10px] text-[16px] w-[145px] px-[24px] flex items-center justify-center gap-[6px] rounded-[19px] hover:bg-[#D8D8D8] cursor-pointer bg-[#EBEBEB] text-[#A5A5A5]"
+									class="arrow py-[10px] text-[16px] w-[145px] px-[24px] flex items-center justify-center gap-[12px] rounded-[19px] hover:bg-[#D8D8D8] cursor-pointer bg-[#EBEBEB] text-[#A5A5A5]"
 								>
 									По цене
-									<img src="./images/arrow.svg" alt="date" />
+									<img src="./images/arrow.svg" alt="date" class="arrow_img" />
 								</p>
 							</div>
 
@@ -475,7 +473,7 @@
 												От
 											</h3>
 											<input
-												class="form_control_container__time__input text-[16px] outline-none text-[#635a5a]"
+												class="form_control_container__time__input !text-[18px] outline-none text-[#635a5a] bg-transparent"
 												type="number"
 												id="fromInput"
 												value="22"
@@ -490,7 +488,7 @@
 												До
 											</h3>
 											<input
-												class="form_control_container__time__input text-[16px] outline-none text-[#635a5a]"
+												class="form_control_container__time__input !text-[18px] outline-none text-[#635a5a] bg-transparent"
 												type="number"
 												id="toInput"
 												value="1500"
@@ -505,14 +503,16 @@
 											type="range"
 											value="10"
 											min="0"
-											max="100"
+											max="1500"
+											class="text-[16px]"
 										/>
 										<input
 											id="toSlider"
 											type="range"
-											value="40"
+											value="400"
 											min="0"
-											max="100"
+											max="1500"
+											class="text-[16px]"
 										/>
 									</div>
 								</div>

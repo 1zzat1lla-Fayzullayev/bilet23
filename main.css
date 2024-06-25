@@ -44,7 +44,6 @@ body {
 	border-radius: 10px;
 }
 
-/* Hamburger Menu Styles */
 #hamburgerMenu {
 	display: flex;
 	flex-direction: column;
@@ -58,7 +57,7 @@ body {
 		),
 		#f71313;
 	position: absolute;
-	top: 105px;
+	top: 102px;
 	right: 0;
 	width: 400px;
 	height: 0;
@@ -313,4 +312,17 @@ input::-webkit-inner-spin-button {
 
 .weekend {
 	color: #006811;
+}
+
+.arrow:hover .arrow_img {
+	transition: 0.2s ease-in;
+	transform: rotate(-90deg);
+}
+
+.slide-content {
+	opacity: 0.3;
+	transition: opacity 0.5s ease;
+}
+.swiper-slide-active .slide-content {
+	opacity: 1;
 }
