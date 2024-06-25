@@ -9,6 +9,19 @@ document.addEventListener('DOMContentLoaded', function () {
 	const price = document.getElementById('price')
 	const priceImg = priceButton.querySelector('img')
 	const dataImg = datePickerToggle.querySelector('img')
+	const nextMonth = document.getElementById('nextMonth')
+	const prevMonth = document.getElementById('prevMonth')
+	const nextYear = document.getElementById('nextYear')
+	const prevYear = document.getElementById('prevYear')
+	const monthYear = document.getElementById('monthYear')
+	const calendarDays = document.getElementById('calendarDays')
+	const calendarModal = document.getElementById('calendar')
+
+	let currentDate = new Date()
+	let today = new Date()
+	let selectedDay = null
+	let selectedMonth = null
+	let selectedYear = null
 
 	datePickerToggle.addEventListener('click', function () {
 		calendar.classList.toggle('hidden')
@@ -143,24 +156,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	toInput.addEventListener('input', () =>
 		controlToInput(toSlider, fromInput, toInput, toSlider)
 	)
-})
-
-document.addEventListener('DOMContentLoaded', function () {
-	const nextMonth = document.getElementById('nextMonth')
-	const prevMonth = document.getElementById('prevMonth')
-	const nextYear = document.getElementById('nextYear')
-	const prevYear = document.getElementById('prevYear')
-	const monthYear = document.getElementById('monthYear')
-	const calendarDays = document.getElementById('calendarDays')
-	const datePickerToggle = document.getElementById('datePickerToggle')
-	const calendarModal = document.getElementById('calendar')
-	const closeCalendarModal = document.getElementById('closeCalendarModal')
-
-	let currentDate = new Date()
-	let today = new Date()
-	let selectedDay = null
-	let selectedMonth = null
-	let selectedYear = null
 
 	function handleDateSelection(day) {
 		const month = currentDate.getMonth()
@@ -285,25 +280,4 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 	renderCalendar()
-})
-
-const swiper = new Swiper('.swiper', {
-	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
-	},
-	on: {
-		init: function () {
-			document.querySelector(
-				'.swiper-slide-active .slide-content'
-			).style.opacity = '1'
-		},
-		slideChange: function () {
-			const slides = document.querySelectorAll('.swiper-slide .slide-content')
-			slides.forEach(slide => (slide.style.opacity = '0'))
-			document.querySelector(
-				'.swiper-slide-active .slide-content'
-			).style.opacity = '1'
-		},
-	},
 })
