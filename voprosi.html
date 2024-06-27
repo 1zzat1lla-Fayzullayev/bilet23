@@ -51,6 +51,7 @@
 							class="flex lg:hidden size-[18px]"
 							src="./images/search.png"
 							alt="search"
+							id="searchToggle"
 						/>
 						<div
 							class="flex flex-col gap-1 w-[30px] cursor-pointer"
@@ -121,6 +122,26 @@
 					</li>
 				</ul>
 			</nav>
+			<div id="searchMenu" class="hidden">
+				<div
+					class="relative w-full flex justify-center items-center gap-[28px] px-[20px]"
+				>
+					<div class="relative w-full">
+						<input
+							type="text"
+							class="flex w-full rounded-[30px] p-4 outline-0 border-0 text-[18px] relative"
+							placeholder="Поиск по мероприятиям"
+						/>
+						<img
+							class="w-[25px] absolute right-[15px] top-1/2 transform -translate-y-1/2"
+							src="./images/search.svg"
+							alt="search"
+						/>
+					</div>
+					<p class="text-white text-[18px]" id="closeSearch">Назад</p>
+				</div>
+			</div>
+
 			<div class="flex justify-center items-center">
 				<div
 					class="lg:flex max-w-[1160px] w-full justify-between py-[10px] hidden"
@@ -167,7 +188,7 @@
 					<div class="flex flex-col gap-[10px] w-full">
 						<div
 							id="dropdown1"
-							class="w-full lg:w-[860px] h-[65px] bg-[#F3F3F3] rounded-[10px] flex items-center justify-between px-[30px] cursor-pointer"
+							class="w-full lg:w-[700px] xl:w-[860px] h-[65px] bg-[#F3F3F3] rounded-[10px] flex items-center justify-between px-[30px] cursor-pointer"
 						>
 							<h3 class="text-[16px] lg:text-[18px] font-medium">Вопрос 1</h3>
 							<img src="./images/plus.png" alt="plus" />
@@ -177,7 +198,7 @@
 						</ul>
 						<div
 							id="dropdown2"
-							class="w-full lg:w-[860px] h-[65px] bg-[#F3F3F3] rounded-[10px] flex items-center justify-between px-[30px] cursor-pointer"
+							class="w-full lg:w-[700px] xl:w-[860px] h-[65px] bg-[#F3F3F3] rounded-[10px] flex items-center justify-between px-[30px] cursor-pointer"
 						>
 							<h3 class="text-[16px] lg:text-[18px] font-medium">Вопрос 2</h3>
 							<img src="./images/plus.png" alt="plus" />
@@ -187,7 +208,7 @@
 						</ul>
 						<div
 							id="dropdown3"
-							class="w-full lg:w-[860px] h-[65px] bg-[#F3F3F3] rounded-[10px] flex items-center justify-between px-[30px] cursor-pointer"
+							class="w-full lg:w-[700px] xl:w-[860px] h-[65px] bg-[#F3F3F3] rounded-[10px] flex items-center justify-between px-[30px] cursor-pointer"
 						>
 							<h3 class="text-[16px] lg:text-[18px] font-medium text-[#F71313]">
 								Вопрос 3

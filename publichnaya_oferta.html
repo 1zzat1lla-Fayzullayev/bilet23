@@ -51,6 +51,7 @@
 							class="flex lg:hidden size-[18px]"
 							src="./images/search.png"
 							alt="search"
+							id="searchToggle"
 						/>
 						<div
 							class="flex flex-col gap-1 w-[30px] cursor-pointer"
@@ -121,6 +122,26 @@
 					</li>
 				</ul>
 			</nav>
+			<div id="searchMenu" class="hidden">
+				<div
+					class="relative w-full flex justify-center items-center gap-[28px] px-[20px]"
+				>
+					<div class="relative w-full">
+						<input
+							type="text"
+							class="flex w-full rounded-[30px] p-4 outline-0 border-0 text-[18px] relative"
+							placeholder="Поиск по мероприятиям"
+						/>
+						<img
+							class="w-[25px] absolute right-[15px] top-1/2 transform -translate-y-1/2"
+							src="./images/search.svg"
+							alt="search"
+						/>
+					</div>
+					<p class="text-white text-[18px]" id="closeSearch">Назад</p>
+				</div>
+			</div>
+
 			<div class="flex justify-center items-center">
 				<div
 					class="lg:flex max-w-[1160px] w-full justify-between py-[10px] hidden"
@@ -158,8 +179,12 @@
 
 		<div class="max-w-[1160px] mx-auto">
 			<div class="mt-[60px] mx-[20px]">
-				<div class="flex flex-col lg:flex-row items-center gap-[20px] lg:gap-[105px]">
-					<h2 class="text-[24px] lg:text-[32px] font-semibold w-full leading-[35px] lg:w-[259px]">
+				<div
+					class="flex flex-col lg:flex-row items-center gap-[20px] lg:gap-[105px]"
+				>
+					<h2
+						class="text-[24px] lg:text-[32px] font-semibold w-full leading-[35px] lg:w-[259px]"
+					>
 						Публичная оферта
 					</h2>
 					<p>
@@ -318,8 +343,12 @@
 						к Принципалу и/или Организатору.
 					</p>
 				</div>
-				<div class="flex flex-col lg:flex-row items-start gap-[10px] lg:gap-[80px] mt-[60px]">
-					<h4 class="text-[20px] font-semibold w-full lg:w-full">2.Общие положения</h4>
+				<div
+					class="flex flex-col lg:flex-row items-start gap-[10px] lg:gap-[80px] mt-[60px]"
+				>
+					<h4 class="text-[20px] font-semibold w-full lg:w-full">
+						2.Общие положения
+					</h4>
 					<p>
 						2.1.  Настоящая Оферта регламентирует условия и порядок реализации
 						Билетов, Электронных билетов и договорные обязательства (права и
@@ -382,8 +411,12 @@
 						(862) 23-86-777  (ежедневно с 10 до 20 ч).
 					</p>
 				</div>
-				<div class="flex flex-col lg:flex-row items-start gap-[10px] lg:gap-[90px] mt-[60px]">
-					<h4 class="text-[20px] font-semibold w-full lg:w-[50%]">3.Предмет оферты</h4>
+				<div
+					class="flex flex-col lg:flex-row items-start gap-[10px] lg:gap-[90px] mt-[60px]"
+				>
+					<h4 class="text-[20px] font-semibold w-full lg:w-[50%]">
+						3.Предмет оферты
+					</h4>
 					<p>
 						3.1.  Предметом настоящей Оферты является:
 						<br />
@@ -420,7 +453,9 @@
 						положениям и ему известны последствия их несоблюдения. 
 					</p>
 				</div>
-				<div class="flex flex-col lg:flex-row items-start gap-[10px] lg:gap-[20px] mt-[60px]">
+				<div
+					class="flex flex-col lg:flex-row items-start gap-[10px] lg:gap-[20px] mt-[60px]"
+				>
 					<h4 class="text-[20px] font-semibold w-full lg:w-[80%]">
 						4.Порядок и условия акцепта
 					</h4>
@@ -498,7 +533,9 @@
 						почтовый адрес) семизначный идентификационный номер Заказа. 
 					</p>
 				</div>
-				<div class="flex flex-col lg:flex-row items-start gap-[10px] lg:gap-[20px] mt-[60px]">
+				<div
+					class="flex flex-col lg:flex-row items-start gap-[10px] lg:gap-[20px] mt-[60px]"
+				>
 					<h4 class="text-[20px] font-semibold w-full lg:w-[150%]">
 						5.Условия обработки персональных данных
 					</h4>
@@ -558,7 +595,9 @@
 						вручении).
 					</p>
 				</div>
-				<div class="flex flex-col lg:flex-row items-start gap-[10px] lg:gap-[50px] mt-[60px]">
+				<div
+					class="flex flex-col lg:flex-row items-start gap-[10px] lg:gap-[50px] mt-[60px]"
+				>
 					<h4 class="text-[20px] font-semibold w-full lg:w-[90%]">
 						6.Права и обязанности сторон
 					</h4>
@@ -739,7 +778,9 @@
 						сайтах Агента/Субагента и оплате Заказа с помощью банковской карты.
 					</p>
 				</div>
-				<div class="flex flex-col lg:flex-row items-start gap-[10px] lg:gap-[65px] mt-[60px]">
+				<div
+					class="flex flex-col lg:flex-row items-start gap-[10px] lg:gap-[65px] mt-[60px]"
+				>
 					<h4 class="text-[20px] font-semibold w-full lg:w-[90%]">
 						7.Порядок совершения платежей
 					</h4>
@@ -896,7 +937,9 @@
 						законодательством Российской Федерации.
 					</p>
 				</div>
-				<div class="flex flex-col lg:flex-row items-start gap-[10px] lg:gap-[55px] mt-[60px]">
+				<div
+					class="flex flex-col lg:flex-row items-start gap-[10px] lg:gap-[55px] mt-[60px]"
+				>
 					<h4 class="text-[20px] font-semibold w-full lg:w-[260%]">
 						8.Порядок и условия возврата денежных средств
 					</h4>
@@ -1082,7 +1125,9 @@
 						договором с организатором мероприятия.
 					</p>
 				</div>
-				<div class="flex flex-col lg:flex-row items-start gap-[10px] lg:gap-[40px] mt-[60px]">
+				<div
+					class="flex flex-col lg:flex-row items-start gap-[10px] lg:gap-[40px] mt-[60px]"
+				>
 					<h4 class="text-[20px] font-semibold w-full lg:w-[160%]">
 						9.Отдельные положения в отношении несовершеннолетних
 					</h4>
@@ -1166,7 +1211,9 @@
 						Сайте Агента, Точках продаж.
 					</p>
 				</div>
-				<div class="flex flex-col lg:flex-row items-start gap-[10px] lg:gap-[45px] mt-[60px]">
+				<div
+					class="flex flex-col lg:flex-row items-start gap-[10px] lg:gap-[45px] mt-[60px]"
+				>
 					<h4 class="text-[20px] font-semibold w-full lg:w-[160%]">
 						10.Отдельные положения в отношении электронного билета
 					</h4>
@@ -1232,8 +1279,12 @@
 						предоставления к нему доступа в личном кабинете Покупателя на Сайте.
 					</p>
 				</div>
-				<div class="flex flex-col lg:flex-row items-start gap-[10px] lg:gap-[50px] mt-[60px]">
-					<h4 class="text-[20px] font-semibold w-full lg:w-[60%]">11.Ответственность</h4>
+				<div
+					class="flex flex-col lg:flex-row items-start gap-[10px] lg:gap-[50px] mt-[60px]"
+				>
+					<h4 class="text-[20px] font-semibold w-full lg:w-[60%]">
+						11.Ответственность
+					</h4>
 					<p>
 						11.1.  В случае неисполнения или ненадлежащего исполнения своих
 						обязательств по Оферте, а равно по Договорам, Стороны несут
@@ -1259,7 +1310,9 @@
 						а также получения и использования услуг в рамках Договоров.
 					</p>
 				</div>
-				<div class="flex flex-col lg:flex-row items-start gap-[10px] lg:gap-[52px] mt-[60px]">
+				<div
+					class="flex flex-col lg:flex-row items-start gap-[10px] lg:gap-[52px] mt-[60px]"
+				>
 					<h4 class="text-[20px] font-semibold w-full lg:w-[160%]">
 						12.Ограничение ответственности и ограничение от ответственности
 					</h4>
@@ -1324,7 +1377,9 @@
 						Оферты.
 					</p>
 				</div>
-				<div class="flex flex-col lg:flex-row items-start gap-[10px] lg:gap-[20px] mt-[60px]">
+				<div
+					class="flex flex-col lg:flex-row items-start gap-[10px] lg:gap-[20px] mt-[60px]"
+				>
 					<h4 class="text-[20px] font-semibold w-full lg:w-[200%]">
 						13.Права на результаты интеллектуальной деятельности
 					</h4>
@@ -1363,7 +1418,9 @@
 						положениями законодательства Российской Федерации.
 					</p>
 				</div>
-				<div class="flex flex-col lg:flex-row items-start gap-[10px] lg:gap-[46px] mt-[60px]">
+				<div
+					class="flex flex-col lg:flex-row items-start gap-[10px] lg:gap-[46px] mt-[60px]"
+				>
 					<h4 class="text-[20px] font-semibold w-full lg:w-[120%]">
 						14.Порядок разрешения споров
 					</h4>
@@ -1395,7 +1452,9 @@
 						билете).
 					</p>
 				</div>
-				<div class="flex flex-col lg:flex-row items-start gap-[10px] lg:gap-[35px] mt-[60px]">
+				<div
+					class="flex flex-col lg:flex-row items-start gap-[10px] lg:gap-[35px] mt-[60px]"
+				>
 					<h4 class="text-[20px] font-semibold w-full lg:w-[66%]">
 						15.Вступление оферты в силу, изменение положений оферты
 					</h4>
@@ -1419,7 +1478,9 @@
 						внесенных изменений.
 					</p>
 				</div>
-				<div class="flex flex-col lg:flex-row items-start gap-[10px] lg:gap-[86px] mt-[60px]">
+				<div
+					class="flex flex-col lg:flex-row items-start gap-[10px] lg:gap-[86px] mt-[60px]"
+				>
 					<h4 class="text-[20px] font-semibold w-full lg:w-[88%]">
 						16.Изменение или расторжение договоров
 					</h4>
@@ -1464,7 +1525,9 @@
 						Билет, в частности предъявлять его к проходу на Мероприятие.
 					</p>
 				</div>
-				<div class="flex flex-col lg:flex-row items-start gap-[10px] lg:gap-[47px] mt-[60px]">
+				<div
+					class="flex flex-col lg:flex-row items-start gap-[10px] lg:gap-[47px] mt-[60px]"
+				>
 					<h4 class="text-[20px] font-semibold w-full lg:w-[88%]">
 						17.Заключительные положения
 					</h4>
@@ -1498,7 +1561,9 @@
 				<div
 					class="flex flex-col lg:flex-row items-start gap-[10px] lg:gap-[86px] mt-[100px]"
 				>
-					<h2 class="text-[24px] lg:text-[32px] font-semibold w-full leading-[35px] lg:w-[259px]">
+					<h2
+						class="text-[24px] lg:text-[32px] font-semibold w-full leading-[35px] lg:w-[259px]"
+					>
 						Публичная оферта
 					</h2>
 					<p>
@@ -1514,8 +1579,12 @@
 						услуг, связанных с приобретением Билетов (Электронных билетов).
 					</p>
 				</div>
-				<div class="flex flex-col lg:flex-row items-start gap-[10px] lg:gap-[55px] mt-[60px]">
-					<h4 class="text-[20px] font-semibold w-full lg:w-[180%]">1.Общие положения</h4>
+				<div
+					class="flex flex-col lg:flex-row items-start gap-[10px] lg:gap-[55px] mt-[60px]"
+				>
+					<h4 class="text-[20px] font-semibold w-full lg:w-[180%]">
+						1.Общие положения
+					</h4>
 					<p>
 						1.1.  Настоящая Оферта регламентирует условия и порядок получения
 						Покупателем рекламной рассылки.  Рекламная рассылка осуществляется
@@ -1593,8 +1662,12 @@
 						данных в соответствии с настоящим пунктом третьим лицам.
 					</p>
 				</div>
-				<div class="flex flex-col lg:flex-row items-start gap-[10px] lg:gap-[15px] mt-[60px]">
-					<h4 class="text-[20px] font-semibold w-full lg:w-full">2.Акцепт оферты</h4>
+				<div
+					class="flex flex-col lg:flex-row items-start gap-[10px] lg:gap-[15px] mt-[60px]"
+				>
+					<h4 class="text-[20px] font-semibold w-full lg:w-full">
+						2.Акцепт оферты
+					</h4>
 					<p>
 						2.1.  Принятие Покупателем положений настоящей оферты осуществляется
 						путем совершения им любого из действий, направленных на приобретение
@@ -1621,7 +1694,9 @@
 						безусловно и в полном объеме.
 					</p>
 				</div>
-				<div class="flex flex-col lg:flex-row items-start gap-[10px] lg:gap-[36px] mt-[60px]">
+				<div
+					class="flex flex-col lg:flex-row items-start gap-[10px] lg:gap-[36px] mt-[60px]"
+				>
 					<h4 class="text-[20px] font-semibold w-full lg:w-[90%]">
 						3.Условия осуществления рекламной рассылки
 					</h4>
@@ -1650,7 +1725,9 @@
 						безусловно и в полном объеме.
 					</p>
 				</div>
-				<div class="flex flex-col lg:flex-row items-start gap-[10px] lg:gap-[15px] mt-[60px]">
+				<div
+					class="flex flex-col lg:flex-row items-start gap-[10px] lg:gap-[15px] mt-[60px]"
+				>
 					<h4 class="text-[20px] font-semibold w-full lg:w-[90%]">
 						4.Порядок отказа от получения рассылки
 					</h4>
@@ -1686,7 +1763,9 @@
 						действия (бездействия) Оператора.
 					</p>
 				</div>
-				<div class="flex flex-col lg:flex-row items-start gap-[10px] lg:gap-[33px] mt-[60px]">
+				<div
+					class="flex flex-col lg:flex-row items-start gap-[10px] lg:gap-[33px] mt-[60px]"
+				>
 					<h4 class="text-[20px] font-semibold w-full lg:w-[60%]">
 						5.Порядок отказа от получения рассылки
 					</h4>

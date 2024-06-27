@@ -16,6 +16,9 @@ document.addEventListener('DOMContentLoaded', function () {
 	const monthYear = document.getElementById('monthYear')
 	const calendarDays = document.getElementById('calendarDays')
 	const calendarModal = document.getElementById('calendar')
+	const searchToggle = document.getElementById('searchToggle')
+	const searchMenu = document.getElementById('searchMenu')
+	const closeSearch = document.getElementById('closeSearch')
 
 	let currentDate = new Date()
 	let today = new Date()
@@ -58,6 +61,14 @@ document.addEventListener('DOMContentLoaded', function () {
 			priceButton.classList.remove('active')
 		}
 	}
+
+	searchToggle.addEventListener('click', function () {
+		searchMenu.classList.toggle('hidden')
+	})
+
+	closeSearch.addEventListener('click', function () {
+		searchMenu.classList.add('hidden')
+	})
 
 	hamburgerMenuToggle.addEventListener('click', function () {
 		hamburgerMenu.classList.toggle('open')
@@ -221,7 +232,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		let weeks = []
 		for (let i = 0; i < days.length; i += 7) {
 			weeks.push(
-				`<ul class="flex items-center justify-between px-[15px] w-full">${days
+				`<ul class="flex items-center justify-between md:px-[15px] w-full">${days
 					.slice(i, i + 7)
 					.join('')}</ul>`
 			)

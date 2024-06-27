@@ -51,6 +51,7 @@
 							class="flex lg:hidden size-[18px]"
 							src="./images/search.png"
 							alt="search"
+							id="searchToggle"
 						/>
 						<div
 							class="flex flex-col gap-1 w-[30px] cursor-pointer"
@@ -121,6 +122,26 @@
 					</li>
 				</ul>
 			</nav>
+			<div id="searchMenu" class="hidden">
+				<div
+					class="relative w-full flex justify-center items-center gap-[28px] px-[20px]"
+				>
+					<div class="relative w-full">
+						<input
+							type="text"
+							class="flex w-full rounded-[30px] p-4 outline-0 border-0 text-[18px] relative"
+							placeholder="Поиск по мероприятиям"
+						/>
+						<img
+							class="w-[25px] absolute right-[15px] top-1/2 transform -translate-y-1/2"
+							src="./images/search.svg"
+							alt="search"
+						/>
+					</div>
+					<p class="text-white text-[18px]" id="closeSearch">Назад</p>
+				</div>
+			</div>
+
 			<div class="flex justify-center items-center">
 				<div
 					class="lg:flex max-w-[1160px] w-full justify-between py-[10px] hidden"
@@ -155,41 +176,44 @@
 				</div>
 			</div>
 		</header>
-
 		<div class="max-w-[1160px] mx-auto">
-			<h2 class="text-[32px] font-semibold mt-[60px] mx-[20px] lg:mx-0">
-				Мероприятие
-			</h2>
 			<img
 				src="./images/Mask group.png"
 				alt="404"
-				class="mt-[40px] mx-auto xl:mx-0"
+				class="mt-[40px] mx-auto xl:mx-0 hidden sm:flex"
 				style="width: calc(100% - 30px)"
 			/>
+			<img
+				src="./images/Mask group1.png"
+				alt="404"
+				class="sm:hidden flex justify-center items-center mx-auto mt-[30px] w-full px-[20px]"
+			/>
 			<div
-				class="mx-[20px] lg:mx-0 flex items-start flex-col lg:flex-row justify-center gap-[25px]"
+				class="mx-[20px] xl:mx-0 flex items-start flex-col lg:flex-row justify-center gap-[25px]"
 			>
 				<div>
-					<h2
-						class="text-[18px] md:text-[24px] lg:text-[32px] font-semibold mt-[40px]"
-					>
+					<h2 class="text-[18px] md:text-[32px] font-semibold mt-[40px]">
 						Концерт «Органный фестиваль. Даниэль Сальвадор»
 					</h2>
-					<p class="text-[14px] lg:text-[18px] mt-[10px]">
+					<p class="text-[14px] md:text-[18px] mt-[10px]">
 						18 марта · СБ · 12:00 · 2023 · Театр · Детям
 					</p>
-					<p class="text-[14px] lg:text-[18px] mt-[10px]">
+					<a
+						href="./ploshadka.html"
+						target="_blank"
+						class="text-[14px] md:text-[18px] mt-[10px] cursor-pointer border-b font-medium border-[#F71313]"
+					>
 						ТРЕТЬЯКОВСКАЯ ГАЛЕРЕЯ
-					</p>
+					</a>
 				</div>
 				<div class="flex items-center gap-[10px] lg:mt-[40px] lg:mx-0">
 					<button
-						class="w-[145px] h-[45px] rounded-[50px] bg-[#F71313] text-white"
+						class="lg:w-[145px] w-[145px] md:w-[220px] h-[45px] rounded-[50px] bg-[#F71313] text-white"
 					>
 						Билеты
 					</button>
 					<button
-						class="w-[145px] h-[45px] rounded-[50px] bg-[#F71313] text-white"
+						class="lg:w-[145px] w-[145px] md:w-[220px] h-[45px] rounded-[50px] bg-[#F71313] text-white"
 					>
 						от 350 ₽
 					</button>
@@ -198,7 +222,7 @@
 
 			<div class="mt-[60px] mx-[20px]">
 				<div
-					class="flex flex-col lg:flex-row items-start gap-[20px] lg:gap-[150px]"
+					class="flex flex-col md:flex-row items-start gap-[20px] md:gap-[91px] lg:gap-[150px]"
 				>
 					<h2 class="text-[32px] font-semibold">Описание</h2>
 					<div>
@@ -206,37 +230,27 @@
 							С 11 по 30 марта в Зале Зарядье пройдёт органный фестиваль. Лучшие
 							органисты соберутся в Москве выступить на одном из самых больших
 							органов Европы в зале с уникальной акустикой.
-							<br />
-							<br />
-
+							<br /><br />
 							В программе фестиваля заявлены дневные и вечерние концерты,
 							мастер-классы и экскурсии, лекции и эксклюзивные встречи для
 							профессионального сообщества органистов, а также премьеры
 							произведений, специально написанных для французского органа Зала
 							Зарядье.
-							<br />
-							<br />
-
+							<br /><br />
 							С 11 по 30 марта в Зале Зарядье пройдёт органный фестиваль. Лучшие
 							органисты соберутся в Москве выступить на одном из самых больших
 							органов Европы в зале с уникальной акустикой.
-							<br />
-							<br />
-
+							<br /><br />
 							В программе фестиваля заявлены дневные и вечерние концерты,
 							мастер-классы и экскурсии, лекции и эксклюзивные встречи для
 							профессионального сообщества органистов, а также премьеры
 							произведений, специально написанных для французского органа Зала
 							Зарядье.
-							<br />
-							<br />
-
+							<br /><br />
 							С 11 по 30 марта в Зале Зарядье пройдёт органный фестиваль. Лучшие
 							органисты соберутся в Москве выступить на одном из самых больших
 							органов Европы в зале с уникальной акустикой.
-							<br />
-							<br />
-
+							<br /><br />
 							В программе фестиваля заявлены дневные и вечерние концерты,
 							мастер-классы и экскурсии, лекции и эксклюзивные встречи для
 							профессионального сообщества органистов, а также премьеры
@@ -251,55 +265,62 @@
 					</div>
 				</div>
 			</div>
+
 			<div class="mt-[90px] px-[20px] w-full">
 				<h2 class="text-[32px] font-semibold">Галерея</h2>
 				<div
-					class="xl:max-w-[1200px] lg:max-w-[900px] md:w-full mx-auto grid place-items-center place-content-center lg:grid-cols-2 mt-[50px] xl:grid-cols-3 w-full gap-[20px]"
+					class="xl:max-w-[1200px] md:max-w-[900px] w-full mx-auto flex flex-wrap justify-center gap-[20px] mt-[50px]"
 				>
 					<img
 						src="./images/female-mime-showing-stop-gesture-to-male-mime-artist-holding-red-rose.png"
 						alt=""
-						class="rounded-[10px] w-[425px] lg:w-full"
+						class="rounded-[10px] w-full md:w-[47%] lg:w-[30%] xl:w-[30%] cursor-pointer gallery-img h-[300px] md:h-auto object-cover"
 					/>
 					<img
 						src="./images/manuel-nageli-p60mNTW5glI-unsplash.png"
 						alt=""
-						class="rounded-[10px] w-[425px] lg:w-full"
+						class="rounded-[10px] w-full md:w-[47%] lg:w-[30%] xl:w-[30%] cursor-pointer gallery-img h-[300px] md:h-auto object-cover"
 					/>
 					<img
 						src="./images/flamenco-performance-on-stage.png"
 						alt=""
-						class="rounded-[10px] w-[425px] lg:w-full"
+						class="rounded-[10px] w-full md:w-[47%] lg:w-[30%] xl:w-[30%] cursor-pointer gallery-img h-[300px] md:h-auto object-cover"
 					/>
 					<img
 						src="./images/male-mime-whispering-in-shocked-female-mime-s-ear-sitting-on-chair-in-auditorium.png"
 						alt=""
-						class="rounded-[10px] w-[425px] lg:w-full"
+						class="rounded-[10px] w-full md:w-[47%] lg:w-[30%] xl:w-[30%] cursor-pointer gallery-img h-[300px] md:h-auto object-cover"
 					/>
 					<img
 						src="./images/portrait-of-a-singer-on-the-stage.png"
 						alt=""
-						class="rounded-[10px] w-[425px] lg:w-full"
+						class="rounded-[10px] w-full md:w-[47%] lg:w-[30%] xl:w-[30%] cursor-pointer gallery-img h-[300px] md:h-auto object-cover"
 					/>
 					<img
 						src="./images/two-mime-artist-performing-on-stage-in-an-empty-auditorium.png"
 						alt=""
-						class="rounded-[10px] w-[425px] lg:w-full"
+						class="rounded-[10px] w-full md:w-[47%] lg:w-[30%] xl:w-[30%] cursor-pointer gallery-img h-[300px] md:h-auto object-cover"
 					/>
 				</div>
 				<iframe
-					width="560"
-					height="315"
 					src="https://www.youtube.com/embed/aLP4JPzphnY?si=kfvVLLoo9_QqdBOM"
 					title="YouTube video player"
 					frameborder="0"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 					referrerpolicy="strict-origin-when-cross-origin"
 					allowfullscreen
-					class="w-full xl:w-[1120px] sm:w-[425px] h-[284px] lg:w-[880px] mx-auto lg:h-[642px] rounded-[10px] mt-[30px]"
+					class="w-full xl:w-[1045px] h-[300px] lg:w-[850px] lg:h-[642px] xl:max-w-[1200px] mx-auto xl:h-[642px] rounded-[10px] mt-[30px]"
 				></iframe>
 			</div>
+
+			<div id="imageModal" class="modalKonsert hidden">
+				<span class="closeK">&times;</span>
+				<div class="modalK-content">
+					<img id="modalImage" src="" />
+				</div>
+			</div>
 		</div>
+
 		<div class="px-[20px] lg:px-[30px] bg-[#F71313] mt-[60px] py-[52px]">
 			<div
 				class="max-w-[1160px] mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 sm:gap-0"

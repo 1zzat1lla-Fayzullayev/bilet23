@@ -8,6 +8,20 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 })
 
+document.addEventListener('DOMContentLoaded', function () {
+	const searchToggle = document.getElementById('searchToggle')
+	const searchMenu = document.getElementById('searchMenu')
+	const closeSearch = document.getElementById('closeSearch')
+
+	searchToggle.addEventListener('click', function () {
+		searchMenu.classList.toggle('hidden')
+	})
+
+	closeSearch.addEventListener('click', function () {
+		searchMenu.classList.add('hidden')
+	})
+})
+
 document.addEventListener('DOMContentLoaded', () => {
 	const dropdownHeaders = document.querySelectorAll("[id^='dropdown']")
 	dropdownHeaders.forEach(header => {
@@ -36,4 +50,28 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 		})
 	})
+})
+
+document.addEventListener('DOMContentLoaded', function () {
+	const modal = document.getElementById('imageModal')
+	const modalImg = document.getElementById('modalImage')
+	const span = document.getElementsByClassName('closeK')[0]
+
+	const images = document.querySelectorAll('.gallery-img')
+	images.forEach(img => {
+		img.addEventListener('click', function () {
+			modal.style.display = 'block'
+			modalImg.src = this.src
+		})
+	})
+
+	span.onclick = function () {
+		modal.style.display = 'none'
+	}
+
+	window.onclick = function (event) {
+		if (event.target === modal) {
+			modal.style.display = 'none'
+		}
+	}
 })

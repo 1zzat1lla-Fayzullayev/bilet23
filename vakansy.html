@@ -51,6 +51,7 @@
 							class="flex lg:hidden size-[18px]"
 							src="./images/search.png"
 							alt="search"
+							id="searchToggle"
 						/>
 						<div
 							class="flex flex-col gap-1 w-[30px] cursor-pointer"
@@ -121,6 +122,26 @@
 					</li>
 				</ul>
 			</nav>
+			<div id="searchMenu" class="hidden">
+				<div
+					class="relative w-full flex justify-center items-center gap-[28px] px-[20px]"
+				>
+					<div class="relative w-full">
+						<input
+							type="text"
+							class="flex w-full rounded-[30px] p-4 outline-0 border-0 text-[18px] relative"
+							placeholder="Поиск по мероприятиям"
+						/>
+						<img
+							class="w-[25px] absolute right-[15px] top-1/2 transform -translate-y-1/2"
+							src="./images/search.svg"
+							alt="search"
+						/>
+					</div>
+					<p class="text-white text-[18px]" id="closeSearch">Назад</p>
+				</div>
+			</div>
+
 			<div class="flex justify-center items-center">
 				<div
 					class="lg:flex max-w-[1160px] w-full justify-between py-[10px] hidden"
@@ -156,64 +177,43 @@
 			</div>
 		</header>
 
-		<div class="max-w-[1160px] mx-auto">
-			<div class="mx-[20px]">
-				<div
-					class="flex items-start flex-col lg:flex-row gap-[20px] lg:gap-[83px] mt-[60px]"
+		<div class="max-w-[1160px] mx-auto mt-[60px] px-[20px] lg:px-[30px]">
+			<form
+				class="flex flex-col justify-center items-center w-full bg-white p-6 rounded-lg shadow-md"
+			>
+				<h2
+					class="text-[24px] md:text-[36px] font-semibold mb-4 text-[#F71313]"
 				>
-					<h4 class="text-[24px] font-semibold w-full">Работа у нас</h4>
-					<div class="flex flex-col gap-[10px] w-full">
-						<div
-							id="dropdown1"
-							class="w-full lg:w-[860px] h-[65px] bg-[#F3F3F3] rounded-[10px] flex items-center justify-between px-[30px] cursor-pointer"
-						>
-							<h3 class="text-[16px] lg:text-[18px] font-medium">
-								Швеи – от 30 000 ₽
-							</h3>
-							<img src="./images/plus.png" alt="plus" />
-						</div>
-						<ul id="dropdownContent1" class="hidden list-disc ml-[50px]">
-							<li><p>мужчины, женщины (рост не ниже 165 см)</p></li>
-							<li><p>профессиональное хореографическое образование</p></li>
-							<li>
-								<p>профессиональные хореографические и сценические данные</p>
-							</li>
-						</ul>
-						<div
-							id="dropdown2"
-							class="w-full lg:w-[860px] h-[65px] bg-[#F3F3F3] rounded-[10px] flex items-center justify-between px-[30px] cursor-pointer"
-						>
-							<h3 class="text-[16px] lg:text-[18px] font-medium">
-								Мастер по пошиву мужской одежды – от 25 000 ₽
-							</h3>
-							<img src="./images/plus.png" alt="plus" />
-						</div>
-						<ul id="dropdownContent2" class="hidden list-disc ml-[50px]">
-							<li><p>мужчины, женщины (рост не ниже 165 см)</p></li>
-							<li><p>профессиональное хореографическое образование</p></li>
-							<li>
-								<p>профессиональные хореографические и сценические данные</p>
-							</li>
-						</ul>
-						<div
-							id="dropdown3"
-							class="w-full lg:w-[860px] h-[65px] bg-[#F3F3F3] rounded-[10px] flex items-center justify-between px-[30px] cursor-pointer"
-						>
-							<h3 class="text-[16px] lg:text-[18px] font-medium text-[#F71313]">
-								Артист балета (солист) – от 69 000 ₽
-							</h3>
-							<img src="./images/minus.png" alt="minus" />
-						</div>
-						<ul id="dropdownContent3" class="list-disc ml-[50px]">
-							<li><p>мужчины, женщины (рост не ниже 165 см)</p></li>
-							<li><p>профессиональное хореографическое образование</p></li>
-							<li>
-								<p>профессиональные хореографические и сценические данные</p>
-							</li>
-						</ul>
-					</div>
+					Работа у нас
+				</h2>
+				<div class="w-full lg:w-[50%] space-y-4">
+					<input
+						type="text"
+						placeholder="Фамилия Имя"
+						class="w-full text-[18px] p-2 border border-gray-300 rounded-md outline-none focus:border-[#F71313]"
+					/>
+					<input
+						type="number"
+						placeholder="Телефон"
+						class="w-full text-[18px] p-2 border border-gray-300 rounded-md outline-none focus:border-[#F71313]"
+					/>
+					<input
+						type="email"
+						placeholder="E-mail"
+						class="w-full text-[18px] p-2 border border-gray-300 rounded-md outline-none focus:border-[#F71313]"
+					/>
+					<textarea
+						placeholder="Комментарий"
+						class="w-full text-[18px] p-2 border border-gray-300 rounded-md outline-none focus:border-[#F71313]"
+					></textarea>
+					<button
+						type="submit"
+						class="w-full py-2 text-[18px] bg-[#F71313] text-white rounded-md hover:bg-[#c01212] transition-colors"
+					>
+						Отправить
+					</button>
 				</div>
-			</div>
+			</form>
 		</div>
 
 		<div class="px-[20px] lg:px-[30px] bg-[#F71313] mt-[60px] py-[52px]">

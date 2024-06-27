@@ -51,6 +51,7 @@
 							class="flex lg:hidden size-[18px]"
 							src="./images/search.png"
 							alt="search"
+							id="searchToggle"
 						/>
 						<div
 							class="flex flex-col gap-1 w-[30px] cursor-pointer"
@@ -121,6 +122,26 @@
 					</li>
 				</ul>
 			</nav>
+			<div id="searchMenu" class="hidden">
+				<div
+					class="relative w-full flex justify-center items-center gap-[28px] px-[20px]"
+				>
+					<div class="relative w-full">
+						<input
+							type="text"
+							class="flex w-full rounded-[30px] p-4 outline-0 border-0 text-[18px] relative"
+							placeholder="Поиск по мероприятиям"
+						/>
+						<img
+							class="w-[25px] absolute right-[15px] top-1/2 transform -translate-y-1/2"
+							src="./images/search.svg"
+							alt="search"
+						/>
+					</div>
+					<p class="text-white text-[18px]" id="closeSearch">Назад</p>
+				</div>
+			</div>
+
 			<div class="flex justify-center items-center">
 				<div
 					class="lg:flex max-w-[1160px] w-full justify-between py-[10px] hidden"
@@ -157,113 +178,129 @@
 		</header>
 
 		<div class="max-w-[1160px] mx-auto">
-			<div class="mx-[20px]">
-				<h2 class="text-[24px] lg:text-[32px] font-semibold mt-[60px]">
-					Карточка оргнизации
+			<div class="mx-4 md:mx-6 lg:mx-8 xl:mx-[20px]">
+				<h2
+					class="text-[24px] lg:text-[32px] font-semibold mt-[30px] md:mt-[60px]"
+				>
+					Карточка организации
 				</h2>
-				<div class="mt-[60px]">
-					<table class="min-w-full mt-6">
-						<tbody class="bg-white ">
-							<tr class="flex flex-col md:flex-row cursor-pointer bg-[#F3F3F3] rounded-[10px]">
-								<th
-									class="px-6 py-3 text-left text-[20px] font-bold text-black uppercase tracking-wider rounded-l-[10px]"
-								>
-									Фирменное наименование
-								</th>
-								<td class="px-6 py-3 text-[18px] rounded-r-[10px] text-gray-900">
-									Общество с ограниченной ответсвенностью «BILET23.RU»
-								</td>
-							</tr>
-							<tr class="flex flex-col md:flex-row cursor-pointer rounded-[10px]">
-								<th
-									class="px-6 py-3 text-left text-[20px] font-bold text-black uppercase tracking-wider rounded-l-[10px]"
-								>
-									Юридический адрес
-								</th>
-								<td class="md:px-[105px] px-6 py-3 text-[18px] rounded-r-[10px] text-gray-900">
-									123456 г. Сочи ул. Название 1
-								</td>
-							</tr>
-							<tr class="flex flex-col md:flex-row cursor-pointer bg-[#F3F3F3] rounded-[10px]">
-								<th
-									class="px-6 py-3 text-left text-[20px] font-bold text-black uppercase tracking-wider rounded-l-[10px]"
-								>
-									ОГРН
-								</th>
-								<td class="md:px-[300px] px-6 py-3 text-[18px] rounded-r-[10px] text-gray-900">123456789</td>
-							</tr>
-							<tr class="flex flex-col md:flex-row cursor-pointer rounded-[10px]">
-								<th
-									class="px-6 py-3 text-left text-[20px] font-bold text-black uppercase tracking-wider rounded-l-[10px]"
-								>
-									ИНН
-								</th>
-								<td class="md:px-[308px] px-6 py-3 text-[18px] rounded-r-[10px] text-gray-900">123456789</td>
-							</tr>
-							<tr class="flex flex-col md:flex-row cursor-pointer bg-[#F3F3F3] rounded-[10px]">
-								<th
-									class="px-6 py-3 text-left text-[20px] font-bold text-black uppercase tracking-wider rounded-l-[10px]"
-								>
-									КПП
-								</th>
-								<td class="md:px-[310px] px-6 py-3 text-[18px] rounded-r-[10px] text-gray-900">123456789</td>
-							</tr>
-							<tr class="flex flex-col md:flex-row cursor-pointer rounded-[10px]">
-								<th
-									class="px-6 py-3 text-left text-[20px] font-bold text-black uppercase tracking-wider rounded-l-[10px]"
-								>
-									Расчетный счет
-								</th>
-								<td class="md:px-[165px] px-6 py-3 text-[18px] rounded-r-[10px] text-gray-900">
-									123456789123456789
-								</td>
-							</tr>
-							<tr class="flex flex-col md:flex-row cursor-pointer bg-[#F3F3F3] rounded-[10px]">
-								<th
-									class="px-6 py-3 text-left text-[20px] font-bold text-black uppercase tracking-wider rounded-l-[10px]"
-								>
-									Корреспондентский счет
-								</th>
-								<td class="md:px-[50px] px-6 py-3 text-[18px] rounded-r-[10px] text-gray-900">
-									123456789123456789
-								</td>
-							</tr>
-							<tr class="flex flex-col md:flex-row cursor-pointer rounded-[10px]">
-								<th
-									class="px-6 py-3 text-left text-[20px] font-bold text-black uppercase tracking-wider rounded-l-[10px]"
-								>
-									БИК банка
-								</th>
-								<td class="md:px-[233px] px-6 py-3 text-[18px] rounded-r-[10px] text-gray-900">12345</td>
-							</tr>
-							<tr class="flex flex-col md:flex-row cursor-pointer bg-[#F3F3F3] rounded-[10px]">
-								<th
-									class="px-6 py-3 text-left text-[20px] font-bold text-black uppercase tracking-wider rounded-l-[10px]"
-								>
-									Генеральный директор
-								</th>
-								<td class="md:px-[80px] px-6 py-3 text-[18px] rounded-r-[10px] text-gray-900">ФИО</td>
-							</tr>
-							<tr class="flex flex-col md:flex-row cursor-pointer rounded-[10px]">
-								<th
-									class="px-6 py-3 text-left text-[20px] font-bold text-black uppercase tracking-wider rounded-l-[10px]"
-								>
-									E-mail
-								</th>
-								<td class="md:px-[287px] px-6 py-3 text-[18px] rounded-r-[10px] text-gray-900">e-mail</td>
-							</tr>
-							<tr class="flex flex-col md:flex-row cursor-pointer bg-[#F3F3F3] rounded-[10px]">
-								<th
-									class="px-6 py-3 text-left text-[20px] font-bold text-black uppercase tracking-wider rounded-l-[10px]"
-								>
-									Телефон
-								</th>
-								<td class="md:px-[255px] px-6 py-3 text-[18px] rounded-r-[10px] text-gray-900">
-									+7 (000) 000-00-00
-								</td>
-							</tr>
-						</tbody>
-					</table>
+				<div class="lg:mt-[60px] space-y-2 md:space-y-0 mt-[30px] md:mt-0">
+					<div
+						class="flex flex-col md:flex-row bg-[#F3F3F3] rounded-[10px] p-2 md:p-0"
+					>
+						<div
+							class="px-4 md:px-6 py-1 md:py-3 text-left text-[16px] md:text-[18px] font-bold text-black uppercase tracking-wider rounded-l-[10px]"
+						>
+							Фирменное наименование
+						</div>
+						<div
+							class="px-4 md:px-6 py-1 md:py-3 text-[14px] md:text-[16px] rounded-r-[10px] text-gray-900"
+						>
+							Общество с ограниченной ответственностью «BILET23.RU»
+						</div>
+					</div>
+					<div class="flex flex-col md:flex-row bg-white rounded-[10px]">
+						<div
+							class="px-4 md:px-6 py-1 md:py-3 text-left text-[16px] md:text-[18px] font-bold text-black uppercase tracking-wider rounded-l-[10px] w-[350px]"
+						>
+							Юридический адрес
+						</div>
+						<div
+							class="px-4 md:px-6 py-1 md:py-3 text-[14px] md:text-[16px] rounded-r-[10px] text-gray-900"
+						>
+							123456 г. Сочи ул. Название 1
+						</div>
+					</div>
+					<div
+						class="flex flex-col md:flex-row bg-[#F3F3F3] rounded-[10px] p-2 md:p-0"
+					>
+						<div
+							class="px-4 md:px-6 py-1 md:py-3 text-left text-[16px] md:text-[18px] font-bold text-black uppercase tracking-wider rounded-l-[10px] w-[350px]"
+						>
+							ИНН
+						</div>
+						<div
+							class="px-4 md:px-6 py-1 md:py-3 text-[14px] md:text-[16px] rounded-r-[10px] text-gray-900"
+						>
+							123456789
+						</div>
+					</div>
+					<div class="flex flex-col md:flex-row rounded-[10px] p-2 md:p-0">
+						<div
+							class="px-4 md:px-6 py-1 md:py-3 text-left text-[16px] md:text-[18px] font-bold text-black uppercase tracking-wider rounded-l-[10px] w-[350px]"
+						>
+							КПП
+						</div>
+						<div
+							class="px-4 md:px-6 py-1 md:py-3 text-[14px] md:text-[16px] rounded-r-[10px] text-gray-900"
+						>
+							123456789
+						</div>
+					</div>
+					<div class="flex flex-col md:flex-row bg-[#F3F3F3] rounded-[10px]">
+						<div
+							class="px-4 md:px-6 py-1 md:py-3 text-left text-[16px] md:text-[18px] font-bold text-black uppercase tracking-wider rounded-l-[10px] w-[350px]"
+						>
+							Расчетный счет
+						</div>
+						<div
+							class="px-4 md:px-6 py-1 md:py-3 text-[14px] md:text-[16px] rounded-r-[10px] text-gray-900"
+						>
+							123456789123456789
+						</div>
+					</div>
+					<div class="flex flex-col md:flex-row rounded-[10px] p-2 md:p-0">
+						<div
+							class="px-4 md:px-6 py-1 md:py-3 text-left text-[16px] md:text-[18px] font-bold text-black uppercase tracking-wider rounded-l-[10px] w-[350px]"
+						>
+							БИК банка
+						</div>
+						<div
+							class="px-4 md:px-6 py-1 md:py-3 text-[14px] md:text-[16px] rounded-r-[10px] text-gray-900"
+						>
+							12345
+						</div>
+					</div>
+					<div
+						class="flex flex-col md:flex-row bg-[#F3F3F3] rounded-[10px] p-2 md:p-0"
+					>
+						<div
+							class="px-4 md:px-6 py-1 md:py-3 text-left text-[16px] md:text-[18px] font-bold text-black uppercase tracking-wider rounded-l-[10px] w-[350px]"
+						>
+							Генеральный директор
+						</div>
+						<div
+							class="px-4 md:px-6 py-1 md:py-3 text-[14px] md:text-[16px] rounded-r-[10px] text-gray-900"
+						>
+							ФИО
+						</div>
+					</div>
+					<div class="flex flex-col md:flex-row rounded-[10px] p-2 md:p-0">
+						<div
+							class="px-4 md:px-6 py-1 md:py-3 text-left text-[16px] md:text-[18px] font-bold text-black uppercase tracking-wider rounded-l-[10px] w-[350px]"
+						>
+							E-mail
+						</div>
+						<div
+							class="px-4 md:px-6 py-1 md:py-3 text-[14px] md:text-[16px] rounded-r-[10px] text-gray-900"
+						>
+							e-mail
+						</div>
+					</div>
+					<div
+						class="flex flex-col md:flex-row bg-[#F3F3F3] rounded-[10px] p-2 md:p-0"
+					>
+						<div
+							class="px-4 md:px-6 py-1 md:py-3 text-left text-[16px] md:text-[18px] font-bold text-black uppercase tracking-wider rounded-l-[10px] w-[350px]"
+						>
+							Телефон
+						</div>
+						<div
+							class="px-4 md:px-6 py-1 md:py-3 text-[14px] md:text-[16px] rounded-r-[10px] text-gray-900"
+						>
+							+7 (000) 000-00-00
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
