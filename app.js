@@ -75,6 +75,13 @@ document.addEventListener('DOMContentLoaded', function () {
 		hamburgerMenuToggle.classList.toggle('close')
 	})
 
+	document
+		.getElementById('promo-checkbox')
+		.addEventListener('change', function () {
+			const textAksii = document.getElementById('text_aksii')
+			textAksii.classList.toggle('check_color', this.checked)
+		})
+
 	const fromSlider = document.getElementById('fromSlider')
 	const toSlider = document.getElementById('toSlider')
 	const fromInput = document.getElementById('fromInput')
