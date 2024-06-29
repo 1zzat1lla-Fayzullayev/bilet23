@@ -186,6 +186,8 @@ document.addEventListener('DOMContentLoaded', function () {
 		selectedMonth = month
 		selectedYear = year
 		calendarModal.classList.add('hidden')
+		datePickerToggle.classList.remove('active')
+		dataImg.src = './images/date.svg'
 		renderCalendar()
 	}
 
