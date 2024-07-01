@@ -178,8 +178,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	function handleDateSelection(day) {
 		const month = currentDate.getMonth()
 		const year = currentDate.getFullYear()
-		const monthName = currentDate.toLocaleString('default', { month: 'long' })
-		const selectedDate = `${day} ${monthName}`
+		const monthName = currentDate.toLocaleString('default', { month: 'short' })
+		const selectedDate = `${monthName} ${day}`
 		localStorage.setItem('selectedDay', JSON.stringify({ day, month, year }))
 		datePickerToggle.textContent = `Дата: ${selectedDate}`
 		selectedDay = day
@@ -291,9 +291,9 @@ document.addEventListener('DOMContentLoaded', function () {
 	if (storedDay) {
 		const { day, month, year } = JSON.parse(storedDay)
 		const monthName = new Date(year, month).toLocaleString('default', {
-			month: 'long',
+			month: 'short',
 		})
-		datePickerToggle.textContent = `Дата: ${day} ${monthName}`
+		datePickerToggle.textContent = `Дата: ${monthName} ${day}`
 		selectedDay = day
 		selectedMonth = month
 		selectedYear = year
